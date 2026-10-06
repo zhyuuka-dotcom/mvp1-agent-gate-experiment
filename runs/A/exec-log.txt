@@ -1,0 +1,15 @@
+1|RUN recon|rc=0 out=2101ch
+2|RUN ls ngxtop tests + wc
+3|READ ngxtop/config_parser.py
+4|READ ngxtop/ngxtop.py (23519ch→截断15000)
+5|RUN 复现 issue 命令
+6|RUN 对照实验：完整格式串 pattern vs 日志行
+7|RUN 存量测试全跑
+8|READ tests/test_config_parser.py + tests/test_characterization.py
+9|RUN grep README -f/log_format（孤儿参数块被丢弃）
+10|READ config_parser.py（v3 通道适配后执行）
+11|READ config_parser.py（写前重读）
+12|WRITE ngxtop/config_parser.py（+resolve_log_format/is_log_format_name/BUILTIN）
+13|READ 自检写后文件
+14|READ ngxtop.py（接线前重读）
+15|RUN grep 接线点（轮次耗尽）

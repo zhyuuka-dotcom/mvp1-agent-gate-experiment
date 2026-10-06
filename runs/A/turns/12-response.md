@@ -1,3 +1,9 @@
+Now let me add a `resolve_log_format` function to config_parser.py that resolves a bare format name to its definition.
+
+<｜｜DSML｜｜ calls>
+<｜｜DSML｜｜ invoke name="WRITE">
+<｜｜DSML｜｜ parameter name="path">ngxtop/config_parser.py</｜｜DSML｜｜ parameter>
+<<<FILE_CONTENTS
 """
 Nginx config parser and pattern builder.
 """
@@ -208,3 +214,7 @@ def extract_variables(log_format):
         return
     for match in re.findall(REGEX_LOG_FORMAT_VARIABLE, log_format):
         yield match
+FILE_CONTENTS
+</｜｜DSML｜｜ parameter>
+</｜｜DSML｜｜ invoke>
+</｜｜DSML｜｜ calls>

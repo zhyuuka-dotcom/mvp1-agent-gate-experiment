@@ -1,0 +1,72 @@
+diff --git a/repo_frozen/ngxtop/config_parser.py b/repo_frozen/ngxtop/config_parser.py
+index 2caba4c..781fcaa 100644
+--- a/repo_frozen/ngxtop/config_parser.py
++++ b/repo_frozen/ngxtop/config_parser.py
+@@ -21,6 +21,9 @@ LOG_FORMAT_COMMON   = '$remote_addr - $remote_user [$time_local] ' \
+                       '"$http_x_forwarded_for"'
+ LOG_FORMAT_CADDY    = 'caddy'
+ 
++# names of built-in log formats that can be passed to --log-format directly
++BUILTIN_LOG_FORMATS = frozenset(['combined', 'common', 'caddy'])
++
+ # common parser element
+ semicolon = Literal(';').suppress()
+ # nginx string parameter can contain any character except: { ; " '
+@@ -88,6 +91,52 @@ def get_log_formats(config):
+         yield name, format_string
+ 
+ 
++def is_log_format_name(value):
++    """
++    Heuristic to decide whether a --log-format value is a log_format *name*
++    (e.g. "main") rather than an inline format string or a built-in keyword.
++
++    A value is treated as a name when it is not one of the built-in formats
++    and does not look like a format string (format strings reference nginx
++    variables such as ``$remote_addr``).
++    """
++    if value is None:
++        return False
++    if value in BUILTIN_LOG_FORMATS:
++        return False
++    return '$' not in value
++
++
++def resolve_log_format(log_format, config=None):
++    """
++    Resolve a --log-format value to an actual nginx log format string.
++
++    Users often pass the *name* of a ``log_format`` directive defined in their
++    nginx configuration (e.g. ``ngxtop -f main``). In that case the name is
++    looked up in the nginx config and replaced with the corresponding format
++    string so that log lines can be parsed.
++
++    :param log_format: value given to --log-format (a name or a format string)
++    :param config: optional path to the nginx config file; when omitted the
++                   path is detected (or taken from --config by the caller)
++    :return: the resolved format string; the original value if it is not a
++             name, or if the name cannot be found in the config.
++    """
++    if not is_log_format_name(log_format):
++        return log_format
++
++    if config is None:
++        return log_format
++    if not os.path.exists(config):
++        return log_format
++
++    with open(config) as f:
++        config_str = f.read()
++
++    log_formats = dict(get_log_formats(config_str))
++    return log_formats.get(log_format, log_format)
++
++
+ def detect_log_config(arguments):
+     """
+     Detect access log config (path and format) of nginx. Offer user to select if multiple access logs are detected.
+@@ -159,4 +208,3 @@ def extract_variables(log_format):
+         return
+     for match in re.findall(REGEX_LOG_FORMAT_VARIABLE, log_format):
+         yield match
+-
