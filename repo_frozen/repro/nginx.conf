@@ -1,0 +1,4 @@
+http {
+    log_format  main  '$request_time $upstream_response_time $remote_addr - $upstream_addr [$time_local] $host "$request" $status $bytes_sent "$http_referer" "$http_user_agent" "$gzip_ratio" "$http_x_forwarded_for" - "$server_addr"';
+    access_log  /var/log/nginx/access.log  main;
+}
