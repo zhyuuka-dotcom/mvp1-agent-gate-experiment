@@ -1,0 +1,9 @@
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_named_format_single_line PASSED [ 12%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_named_format_multiline PASSED [ 25%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_stats_match_log_content PASSED [ 37%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_named_format_selects_right_one PASSED [ 50%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_unknown_name_clean_error PASSED [ 62%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_direct_format_string_unchanged PASSED [ 75%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_default_combined_unchanged PASSED [ 87%]
+tasks/T1/oracle/hidden/test_t1_hidden.py::test_multi_group_by_unchanged PASSED [100%]
+============================== 8 passed in 1.79s ===============================

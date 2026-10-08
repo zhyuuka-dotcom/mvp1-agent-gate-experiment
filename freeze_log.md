@@ -115,3 +115,17 @@ bytes_sent 统计、平均值并见）+ 承载这些面的实现文件 + 覆盖�
 
 第二轮@30 之后、在 T2 运行之后（与 T2 排序以届时执行序列为准）。
 
+## T1 神谕修正（D-008，2026-10-09 05:10 裁决）
+
+- 修正：tasks/T1/oracle/hidden/test_t1_hidden.py 的 summary_row()——
+  数据行判据（| 起始且首列数值），锚定 docstring 原意；断言与期望值
+  零改动；仅此一处
+- 冻结时缺陷：绿路径下误取 orgtbl 表头行（2xx…5xx→[2,3,4,5]）→
+  spec#1 对任何正确实现恒假红；冻结验证只跑红侧故漏网（教训已升格
+  PROTOCOL v1.1 追加条款：冻结验证必须含绿侧）
+- 复验三件（全档 runs/E/integration-records/post-d008/）：红侧 5R/3G
+  与冻结一致；参考修复 8/8；存量 28/28 双仓。加跑：验收器于参考修复
+  首达 ACCEPTANCE PASS（E 反馈环闭合）
+- 替代关系：冻结 commit 34f1d8c 的该函数实现（D-008 授权，修正 commit
+  见 git log 本条；PROVENANCE.md 修正条目在案）
+

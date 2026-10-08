@@ -35,10 +35,25 @@ def run_cli(repo, *args):
 
 
 def summary_row(stdout):
-    """取 Summary: 后的第一条数据行，返回其中的数字序列。"""
+    """取 Summary: 后的第一条数据行，返回其中的数字序列。
+
+    数据行判据（D-008 修正，2026-10-09）：以 | 起始且首列可解析为数值的
+    行——表头行（首列为列名）与分隔行（首列为 ---）自然排除。修正锚定
+    本 docstring 原意（"第一条数据行"）；原实现在绿路径下误取含数字的
+    表头行，冻结时绿侧未执行故漏网。替代关系与复验记录见 PROVENANCE.md
+    修正条目及 freeze_log.md；冻结原版以 git 历史（34f1d8c）为准。
+    """
     seg = stdout.split("Summary:", 1)[1]
     for line in seg.splitlines():
-        nums = re.findall(r"-?\d+(?:\.\d+)?", line)
+        s = line.strip()
+        if not s.startswith("|"):
+            continue
+        first = s.strip("|").split("|")[0].strip()
+        try:
+            float(first)
+        except ValueError:
+            continue
+        nums = re.findall(r"-?\d+(?:\.\d+)?", s)
         if nums:
             return [float(n) for n in nums]
     return []

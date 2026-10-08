@@ -1,0 +1,7 @@
+=== 加跑：修正后验收器 on 未修正仓库（期望 FAIL 0/5）===
+ACCEPTANCE FAIL
+spec-direct 0/5
+edge 3/3
+存量 28/28
+自报 0/0
+exit=1
