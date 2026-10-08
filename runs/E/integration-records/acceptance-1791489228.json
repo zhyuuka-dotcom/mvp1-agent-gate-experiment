@@ -1,0 +1,39 @@
+{
+ "ts": 1791489228.1204064,
+ "receipt": "ACCEPTANCE PASS\nspec-direct 2/2\nedge 1/1\n存量 28/28\n自报 0/0",
+ "passed": true,
+ "counts": {
+  "spec": [
+   2,
+   2
+  ],
+  "edge": [
+   1,
+   1
+  ],
+  "existing": [
+   28,
+   28
+  ],
+  "self_reported": [
+   0,
+   0
+  ]
+ },
+ "oracle_per_test": {
+  "test_mock_spec_always": true,
+  "test_mock_spec_mark": true,
+  "test_mock_edge_always": true
+ },
+ "self_report_details": [],
+ "new_test_files": [],
+ "new_test_files_vs_declared": [
+  0,
+  0
+ ],
+ "integrity": {
+  "snapshot": "/tmp/pytest-of-z/pytest-3/repo_pass0/fdv-snapshots/fdv-snapshot-done-1791489227.tar.gz",
+  "errors": []
+ },
+ "dsml": null
+}
