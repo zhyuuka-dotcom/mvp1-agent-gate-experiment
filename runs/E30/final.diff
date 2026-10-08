@@ -1,0 +1,54 @@
+Only in /tmp/r2e30/repo: PLAN.md
+diff -r '--exclude=.venv' '--exclude=__pycache__' '--exclude=.pytest_cache' repo_frozen/ngxtop/config_parser.py /tmp/r2e30/repo/ngxtop/config_parser.py
+23a24,26
+> # built-in format names that do not need to be resolved from a config file
+> LOG_FORMAT_NAMES = ('combined', 'common', 'caddy')
+> 
+90a94,138
+> def is_log_format_name(log_format):
+>     """
+>     Return True if given value looks like the name of a ``log_format`` directive
+>     rather than a literal format string.
+> 
+>     A literal format string always contains at least one nginx variable (``$name``);
+>     a format name is a single token without spaces or ``$`` characters.
+>     """
+>     if not log_format:
+>         return False
+>     if '$' in log_format:
+>         return False
+>     return re.search(r'\s', log_format) is None
+> 
+> 
+> def resolve_log_format(log_format, config=None):
+>     """
+>     Resolve a ``log_format`` name (e.g. ``main``) into the format string defined
+>     in the nginx configuration.
+> 
+>     Built-in formats (combined/common/caddy) and literal format strings are
+>     returned unchanged. If a name is given, the nginx config is parsed (auto
+>     detected when ``config`` is not set) and the matching format string is
+>     returned; if the name cannot be found an error is raised.
+>     """
+>     if log_format in LOG_FORMAT_NAMES:
+>         return log_format
+>     if not is_log_format_name(log_format):
+>         # a literal format string; use it as is
+>         return log_format
+> 
+>     if config is None:
+>         config = detect_config_path()
+>     if not os.path.exists(config):
+>         error_exit('Nginx config file not found: %s' % config)
+> 
+>     with open(config) as f:
+>         config_str = f.read()
+> 
+>     log_formats = dict(get_log_formats(config_str))
+>     if log_format not in log_formats:
+>         error_exit('Incorrect format name set: "%s"' % log_format)
+>     return log_formats[log_format]
+> 
+> 
+162d209
+< 

@@ -1,0 +1,3 @@
+A@30 离线神谕补测（cap 时点终态）：8/8 PASSED（2026-10-09 04:5x）
+存量套件：33 passed（28 原有 + 5 agent 新增：test_named_format_resolved_from_config 等）
+遥测注记：first_write 遥测列漏记——A 执行器 DSML 写盘返回标签非 WRITE_OK（口径差异），diff 为地面真值（135 行，config_parser+ngxtop+README+test_config_parser 四文件）

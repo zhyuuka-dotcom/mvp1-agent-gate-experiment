@@ -1,0 +1,173 @@
+{
+ "arm": "A30",
+ "task": "T1",
+ "round": 2,
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=492ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1625ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=6032ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1091ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2915ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1359ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=5ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3157ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=750ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3450ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=847ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=486ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1112ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=5ch"
+  },
+  {
+   "t": 17,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3ch"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=750ch"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=480ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=237ch"
+  },
+  {
+   "t": 21,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=195ch"
+  },
+  {
+   "t": 22,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3ch"
+  },
+  {
+   "t": 23,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=953ch"
+  },
+  {
+   "t": 24,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=108ch"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3ch"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=67ch"
+  },
+  {
+   "t": 27,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1856ch"
+  },
+  {
+   "t": 28,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3ch"
+  },
+  {
+   "t": 29,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=60ch"
+  },
+  {
+   "t": 30,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=105ch"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [
+  15
+ ],
+ "self_report_parse": [],
+ "new_test_files": []
+}

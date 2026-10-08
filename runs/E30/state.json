@@ -1,0 +1,10 @@
+{
+ "phase": "PLAN_APPROVED",
+ "whitelist": [
+  "ngxtop/config_parser.py",
+  "ngxtop/ngxtop.py"
+ ],
+ "plan_attempts": 4,
+ "plan_rejections": 3,
+ "amendments": 0
+}

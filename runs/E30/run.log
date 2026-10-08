@@ -1,0 +1,62 @@
+[04:52:18] setup arm=E30 repo=frozen 树 cap=30
+[04:52:19] T1: response 92ch
+[04:52:19] T1: exec rc=0 READ_MISS
+[04:52:19] T2: response 59ch
+[04:52:19] T2: exec rc=0 RUN_OK rc=0 out=488ch
+[04:52:20] T3: response 42ch
+[04:52:20] T3: exec rc=0 RUN_OK rc=2 out=131ch
+[04:52:21] T4: response 30ch
+[04:52:21] T4: exec rc=0 RUN_OK rc=0 out=1122ch
+[04:52:22] T5: response 144ch
+[04:52:22] T5: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[04:52:23] T6: response 130ch
+[04:52:23] T6: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[04:52:24] T7: response 185ch
+[04:52:24] T7: exec rc=0 READ_OK repro/nginx.conf 292ch
+[04:52:25] T8: response 32ch
+[04:52:25] T8: exec rc=0 READ_OK repro/nginx_multiline.conf 342ch
+[04:52:25] T9: response 22ch
+[04:52:25] T9: exec rc=0 READ_OK repro/access.log 764ch
+[04:52:26] T10: response 208ch
+[04:52:26] T10: exec rc=0 READ_OK tests/test_config_parser.py 3157ch
+[04:52:28] T11: response 395ch
+[04:52:28] T11: exec rc=0 RUN_OK rc=0 out=1101ch
+[04:52:30] T12: response 640ch
+[04:52:30] T12: exec rc=0 READ_OK ngxtop/utils.py 548ch
+[04:52:32] T13: response 1134ch
+[04:52:32] T13: exec rc=0 RUN_OK rc=0 out=1204ch
+[04:52:34] T14: response 672ch
+[04:52:34] T14: exec rc=0 RUN_OK rc=0 out=236ch
+[04:52:35] T15: response 337ch
+[04:52:35] T15: exec rc=0 RUN_OK rc=0 out=309ch
+[04:52:38] T16: response 2257ch
+[04:52:38] T16: exec rc=0 READ_OK setup.py 1084ch
+[04:52:39] T17: response 718ch
+[04:52:39] T17: exec rc=0 READ_OK repro/combined.log 171ch
+[04:52:41] T18: response 578ch
+[04:52:41] T18: exec rc=0 READ_OK tests/test_parse_log.py 4551ch
+[04:52:41] T19: response 114ch
+[04:52:41] T19: exec rc=0 READ_OK tests/test_characterization.py 1286ch
+[04:52:43] T20: response 1010ch
+[04:52:43] T20: exec rc=0 READ_OK tests/test_debug_json_parsing.py 4218ch
+[04:52:44] T21: response 239ch
+[04:52:44] T21: exec rc=0 READ_OK README.rst 10423ch
+[04:52:50] T22: response 3840ch
+[04:52:50] T22: exec rc=0 PLAN_REJECTED a1
+[04:52:58] T23: response 7200ch
+[04:52:58] T23: exec rc=0 READ_OK repro/access.log 764ch
+[04:53:01] T24: response 2533ch
+[04:53:01] T24: exec rc=0 PLAN_REJECTED a2
+[04:53:06] T25: response 4050ch
+[04:53:06] T25: exec rc=0 PLAN_REJECTED a3
+[04:53:09] T26: response 2283ch
+[04:53:09] T26: exec rc=0 PLAN_APPROVED a4
+[04:53:18] T27: response 8246ch
+[04:53:18] T27: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[04:53:19] T28: response 137ch
+[04:53:19] T28: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[04:53:25] T29: response 8273ch
+[04:53:25] T29: exec rc=98 NO_ACTION
+[04:53:31] T30: response 7842ch
+[04:53:31] T30: exec rc=0 WRITE_OK ngxtop/config_parser.py
+[04:53:31] END: outcome=CAP done_attempts=0 cap_hit=True

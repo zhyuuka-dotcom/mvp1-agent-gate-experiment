@@ -1,0 +1,171 @@
+{
+ "arm": "E30",
+ "task": "T1",
+ "round": 2,
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=488ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=131ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1122ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/nginx.conf 292ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/nginx_multiline.conf 342ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/access.log 764ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_config_parser.py 3157ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1101ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/utils.py 548ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1204ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=236ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=309ch"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK setup.py 1084ch"
+  },
+  {
+   "t": 17,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/combined.log 171ch"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_parse_log.py 4551ch"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_characterization.py 1286ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_debug_json_parsing.py 4218ch"
+  },
+  {
+   "t": 21,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK README.rst 10423ch"
+  },
+  {
+   "t": 22,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a1"
+  },
+  {
+   "t": 23,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/access.log 764ch"
+  },
+  {
+   "t": 24,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a2"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a3"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_APPROVED a4"
+  },
+  {
+   "t": 27,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 28,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 29,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 30,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_OK ngxtop/config_parser.py"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": "ngxtop/config_parser.py",
+ "turns_spent_before_first_write": 29,
+ "plan_attempts": 1,
+ "plan_rejections": 3,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": []
+}

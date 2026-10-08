@@ -1,0 +1,177 @@
+{
+ "arm": "C30",
+ "task": "T1",
+ "round": 2,
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=4113ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1959ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1390ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3885ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2080ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1098ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=4473ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=359ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=434ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=17ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=7024ch"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=251ch"
+  },
+  {
+   "t": 17,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=847ch"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=94ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=4299ch"
+  },
+  {
+   "t": 21,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 22,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 23,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 24,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "RUN_NOARG"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=6ch"
+  },
+  {
+   "t": 27,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=99ch"
+  },
+  {
+   "t": 28,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a1"
+  },
+  {
+   "t": 29,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1121ch"
+  },
+  {
+   "t": 30,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a2"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 2,
+ "amendments": 0,
+ "dsml_events": [
+  6,
+  11,
+  17,
+  21,
+  23
+ ],
+ "self_report_parse": [],
+ "new_test_files": []
+}

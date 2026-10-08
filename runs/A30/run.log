@@ -1,0 +1,62 @@
+[04:49:14] setup arm=A30 repo=frozen 树 cap=30
+[04:49:15] T1: response 302ch
+[04:49:15] T1: exec rc=0 RUN_OK rc=0 out=492ch
+[04:49:16] T2: response 331ch
+[04:49:16] T2: exec rc=0 RUN_OK rc=0 out=1625ch
+[04:49:17] T3: response 180ch
+[04:49:17] T3: exec rc=0 RUN_OK rc=0 out=6032ch
+[04:49:18] T4: response 229ch
+[04:49:18] T4: exec rc=0 RUN_OK rc=0 out=1091ch
+[04:49:20] T5: response 330ch
+[04:49:20] T5: exec rc=0 RUN_OK rc=0 out=2915ch
+[04:49:21] T6: response 188ch
+[04:49:21] T6: exec rc=0 RUN_OK rc=0 out=1359ch
+[04:49:22] T7: response 417ch
+[04:49:22] T7: exec rc=0 RUN_OK rc=0 out=5ch
+[04:49:23] T8: response 392ch
+[04:49:23] T8: exec rc=0 RUN_OK rc=0 out=3157ch
+[04:49:25] T9: response 862ch
+[04:49:25] T9: exec rc=0 RUN_OK rc=0 out=750ch
+[04:49:26] T10: response 575ch
+[04:49:26] T10: exec rc=0 RUN_OK rc=0 out=3450ch
+[04:49:27] T11: response 270ch
+[04:49:29] T11: exec rc=0 RUN_OK rc=0 out=847ch
+[04:49:30] T12: response 564ch
+[04:49:30] T12: exec rc=0 RUN_OK rc=0 out=486ch
+[04:49:33] T13: response 943ch
+[04:49:33] T13: exec rc=0 RUN_OK rc=0 out=1112ch
+[04:49:34] T14: response 741ch
+[04:49:34] T14: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[04:49:41] T15: response 8197ch
+[04:49:41] T15: exec rc=98 NO_ACTION
+[04:49:44] T16: response 3014ch
+[04:49:44] T16: exec rc=0 RUN_OK rc=0 out=5ch
+[04:49:46] T17: response 1074ch
+[04:49:46] T17: exec rc=0 RUN_OK rc=0 out=3ch
+[04:49:48] T18: response 585ch
+[04:49:48] T18: exec rc=0 RUN_OK rc=0 out=750ch
+[04:49:49] T19: response 894ch
+[04:49:50] T19: exec rc=0 RUN_OK rc=0 out=480ch
+[04:49:52] T20: response 840ch
+[04:49:53] T20: exec rc=0 RUN_OK rc=0 out=237ch
+[04:49:55] T21: response 489ch
+[04:49:55] T21: exec rc=0 RUN_OK rc=0 out=195ch
+[04:49:58] T22: response 2654ch
+[04:49:58] T22: exec rc=0 RUN_OK rc=0 out=3ch
+[04:49:59] T23: response 431ch
+[04:49:59] T23: exec rc=0 RUN_OK rc=0 out=953ch
+[04:50:00] T24: response 651ch
+[04:50:01] T24: exec rc=0 RUN_OK rc=0 out=108ch
+[04:50:02] T25: response 1044ch
+[04:50:02] T25: exec rc=0 RUN_OK rc=0 out=3ch
+[04:50:04] T26: response 481ch
+[04:50:04] T26: exec rc=0 RUN_OK rc=0 out=67ch
+[04:50:05] T27: response 254ch
+[04:50:05] T27: exec rc=0 RUN_OK rc=0 out=1856ch
+[04:50:07] T28: response 851ch
+[04:50:07] T28: exec rc=0 RUN_OK rc=0 out=3ch
+[04:50:10] T29: response 1315ch
+[04:50:10] T29: exec rc=0 RUN_OK rc=0 out=60ch
+[04:50:11] T30: response 271ch
+[04:50:12] T30: exec rc=0 RUN_OK rc=0 out=105ch
+[04:50:12] END: outcome=CAP done_attempts=0 cap_hit=True
