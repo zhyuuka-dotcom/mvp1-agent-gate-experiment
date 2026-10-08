@@ -13,11 +13,10 @@
 DONE 触发（冻结语义）：re.search(r"^DONE\\s*$", text, re.M)——与
 A/C 臂 exec_request 的 DONE 检测同源同正则（frozen）。
 
-5.2(d) 边界（如实声明，不自行约定口径）：冻结的 DONE 消息格式
-（mechanics：任务完成时单独一行声明 DONE）无自报测试声明槽位。
-parse_self_reports 当前恒返回 []（n=0 路径，无歧义可执行）；
-声明语法已报 PI 裁定（见 EXECUTOR-STATUS 待裁事项），裁定后接入
-run_self_reports 的声明列表（执行器本身已就绪并自测）。
+D-007（2026-10-09 05:10）：自报声明槽位已裁——TEST 语法（DONE 行后
+精确前缀 `TEST ` 行，命令或测试路径）。parse_self_reports 已按机械
+口径实现；冻结 mechanics 文本不动（A/C 运行记录原样），E 臂 mechanics
+组装时按 D-007 落地（草稿 runs/E/mechanics_e_draft.md）。n=0 仍合法。
 
 用法：
   库式（E 运行器在 DONE 时调用）：
@@ -50,17 +49,29 @@ def is_done_message(text):
     return bool(DONE_RE.search(text))
 
 
-# ---------------- 5.2(d) 声明解析（n=0 恒定，待 PI 裁定） ----------------
+# ---------------- D-007 声明解析（TEST 语法，2026-10-09 05:10 裁决） ----------------
+
+TEST_LINE_RE = re.compile(r"^TEST (\S.*)$")
+
 
 def parse_self_reports(text):
-    """解析 DONE 消息中的自报测试声明 → 声明列表（命令或测试文件路径）。
+    """解析 DONE 消息中的自报测试声明 → 声明列表（D-007 机械口径）。
 
-    【EXTENSION POINT——唯一待裁定接入点】
-    冻结 DONE 格式无声明槽位（D-005 5.2(d)），本函数不得自行约定口径：
-    当前恒返回 []（n=0 空真路径）。PI 裁定声明语法后，在此实现解析，
-    其余管线（run_self_reports/计数/回执/遥测）无需改动。
+    最终消息中，DONE 行之后、以精确前缀 `TEST `（大写 TEST + 一个空格）
+    起始的每一行 = 一条声明（行内其余部分为命令或测试路径）；位置与
+    顺序不要求紧邻；重复声明各计一次。非精确前缀（含小写 test、裸
+    TEST、行首空白）不是声明。DONE 行之前的内容不算。n=0 仍合法
+    （D-005 5.3 空真不变）。
     """
-    return []
+    m = DONE_RE.search(text)
+    if not m:
+        return []
+    declarations = []
+    for line in text[m.end():].splitlines():
+        mm = TEST_LINE_RE.match(line)
+        if mm:
+            declarations.append(mm.group(1).strip())
+    return declarations
 
 
 def _resolve(p):
@@ -70,26 +81,43 @@ def _resolve(p):
 
 
 def run_self_reports(repo, declarations, timeout=DEFAULT_TIMEOUT):
-    """执行声明列表 → (w, 明细)。D-005 5.2(a)(b)：
-    n=声明项数；w=神谕实际执行后通过数；执行报错计入 n 不计入 w。
-    通过判据：命令退出码 0。
+    """执行声明列表 → (w, 明细)。D-005 5.2(a)(b) + D-007：
+    n=声明项数；w=神谕实际执行后通过数；执行报错/文件不存在/输出不可判
+    → 计入 n 不计入 w。通过判据：命令退出码 0。
+
+    声明两形态的机械执行（D-007"命令或测试路径"）：
+    - 测试文件路径（repo 内存在且以 .py 结尾）→ 冻结调用协议
+      `.venv/bin/python -m pytest <路径>`
+    - 其余（含不存在的 .py 路径）→ shell 命令（cwd=repo），报错自然
+      落入"计 n 不计 w"
     """
+    repo = Path(repo)
     results = []
     w = 0
     for decl in declarations:
+        as_path = Path(decl)
+        is_test_path = (decl.endswith(".py") and (repo / as_path).is_file())
         try:
-            r = subprocess.run(decl, shell=True, cwd=str(repo),
-                               capture_output=True, text=True, timeout=timeout)
+            if is_test_path:
+                r = subprocess.run(
+                    [str(repo / ".venv/bin/python"), "-m", "pytest", decl,
+                     "--tb=no", "-q"], cwd=str(repo),
+                    capture_output=True, text=True, timeout=timeout)
+            else:
+                r = subprocess.run(decl, shell=True, cwd=str(repo),
+                                   capture_output=True, text=True,
+                                   timeout=timeout)
             passed = (r.returncode == 0)
-            results.append({"decl": decl, "rc": r.returncode, "passed": passed})
+            results.append({"decl": decl, "rc": r.returncode, "passed": passed,
+                            "form": "pytest-path" if is_test_path else "shell"})
             if passed:
                 w += 1
         except subprocess.TimeoutExpired:
             results.append({"decl": decl, "rc": None, "passed": False,
-                            "error": "timeout"})
+                            "form": "?", "error": "timeout"})
         except Exception as e:  # 执行报错：计入 n 不计入 w
             results.append({"decl": decl, "rc": None, "passed": False,
-                            "error": repr(e)})
+                            "form": "?", "error": repr(e)})
     return w, results
 
 
@@ -194,7 +222,7 @@ def run_acceptance(repo, done_text, config_path, snapshot_dir=None):
     spec_pass = sum(1 for t in config["spec_tests"] if oracle_res[t])
     edge_pass = sum(1 for t in config["edge_tests"] if oracle_res[t])
 
-    # 3. 自报 w/n（5.2(d)：n=0 恒定直至 PI 裁定声明语法）
+    # 3. 自报 w/n（D-007 TEST 语法；n=0 空真合法）
     declarations = parse_self_reports(done_text)
     w, self_details = run_self_reports(repo, declarations)
     n = len(declarations)

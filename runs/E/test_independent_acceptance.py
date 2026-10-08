@@ -197,3 +197,80 @@ def test_fdv_snapshot_created(repo_pass, tmp_path):
     snap = Path(tel["integrity"]["snapshot"])
     assert snap.exists() and snap.stat().st_size > 0
     assert tel["integrity"]["errors"] == []
+
+
+# ---------------- D-007：TEST 声明语法（2026-10-09 05:10 裁决落地） ----------------
+
+def test_d007_zero_declarations():
+    """零声明类：正文提及测试但无 TEST 行 → n=0（D-007(3)）。"""
+    msg = "完成。我自测了 pytest tests/ -q 全绿，还加了两个测试文件。\nDONE\n"
+    assert parse_self_reports(msg) == []
+    assert parse_self_reports("DONE\n") == []
+
+
+def test_d007_multiple_and_duplicate_declarations():
+    """多条声明类：DONE 行后多条、不紧邻、重复各计一次（D-007(1)(2)）。"""
+    msg = ("实现完成。\nDONE\n"
+           "TEST .venv/bin/python -m pytest tests/test_a.py -q\n"
+           "中间说明文字，不是声明\n"
+           "TEST .venv/bin/python -m pytest tests/test_a.py -q\n"
+           "TEST tests/test_b.py\n")
+    assert parse_self_reports(msg) == [
+        ".venv/bin/python -m pytest tests/test_a.py -q",
+        ".venv/bin/python -m pytest tests/test_a.py -q",
+        "tests/test_b.py"]
+
+
+def test_d007_prefix_variants_not_declared():
+    """前缀变体类：小写 test / 裸 TEST / 行首空白 / DONE 行之前 → 均非声明
+    （D-007(3) 精确前缀）。"""
+    msg = ("test pytest tests/x.py\n"
+           "TEST\n"
+           "   TEST tests/y.py\n"
+           "TESTtests/z.py\n"
+           "DONE\n"
+           "test pytest tests/w.py\n")
+    assert parse_self_reports(msg) == []
+
+
+def test_d007_error_declaration_n_not_w(repo_pass):
+    """含错声明类：执行报错/文件不存在 → 计 n 不计 w（D-007(2) 5.2(b)）。"""
+    w, details = run_self_reports(
+        repo_pass, ["tests/definitely_missing.py", "exit 7"])
+    assert w == 0 and len(details) == 2
+    assert all(d["passed"] is False for d in details)
+
+
+def test_d007_path_form_pytest_execution(repo_pass, tmp_path):
+    """路径形态：repo 内存在且 .py → venv pytest 执行（D-007 命令或测试
+    路径）；新建通过测试 → w=1。"""
+    import shutil as _sh
+    dst = tmp_path / "repo_pathform"
+    _sh.copytree(repo_pass, dst)
+    (dst / "tests" / "test_declared_new.py").write_text(
+        "def test_ok():\n    assert 1 + 1 == 2\n")
+    w, details = run_self_reports(dst, ["tests/test_declared_new.py"])
+    assert w == 1, details
+    assert details[0]["form"] == "pytest-path"
+    w2, _ = run_self_reports(dst, [".venv/bin/python -m pytest tests/test_declared_new.py -q"])
+    assert w2 == 1  # 命令形态同过
+
+
+def test_d007_integration_receipt_self_report_line(repo_pass, tmp_path):
+    """集成：DONE + TEST 声明（通过）→ 回执自报 1/1 且 PASS；声明失败 →
+    自报 0/1 且 FAIL（w≠n 阻断，D-005 5.3）。"""
+    import shutil as _sh
+    dst = tmp_path / "repo_d007_int"
+    _sh.copytree(repo_pass, dst)
+    (dst / "tests" / "test_declared_ok.py").write_text(
+        "def test_ok():\n    assert True\n")
+    ok, receipt, tel = run_acceptance(
+        dst, "DONE\nTEST tests/test_declared_ok.py\n",
+        SELFTEST_CFG, snapshot_dir=tmp_path / "snap")
+    assert ok is True and "自报 1/1" in receipt
+    assert tel["new_test_files"] == ["test_declared_ok.py"]
+    assert tel["new_test_files_vs_declared"] == [1, 1]
+    bad, receipt2, _ = run_acceptance(
+        dst, "DONE\nTEST tests/definitely_missing.py\n",
+        SELFTEST_CFG, snapshot_dir=tmp_path / "snap")
+    assert bad is False and "自报 0/1" in receipt2
