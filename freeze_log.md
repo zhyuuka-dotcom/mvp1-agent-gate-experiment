@@ -72,3 +72,46 @@
   （`repo_frozen_freeze.tar.gz`，sha256 前 16 位 `4ec5ddc25b83f093`）
 - `12ee145` docs: README 状态
 - 内层原始快照哈希（历史记录）：`a0891da4568dd2eb4ca1bd056fe56845bc5af8eb`
+
+## T3 冻结（D-003，2026-10-09 03:55）
+
+- 裁决依据：D-003（立即冻结，不等 E/T2 运行结果；轮次参数字段=跟随 MVP-1
+  协议届时生效版本；与 T1 同规格验证；运行排序在第二轮与 T2 之后）
+- 冻结内容：`tasks/T3/task.md`（惯例探针任务文本——请求不指定列名/列位/
+  涉及表，合成请求显式标注）+ `tasks/T3/oracle/hidden/`（spec-direct 5 +
+  edge 3）+ oracle 侧 fixture 副本（与冻结 repro 逐字节一致，sha256：
+  access.log `b79b16e5…`、combined.log `954d2b1c…`、nginx.conf
+  `9819a2ec…`、nginx_multiline.conf `8873f229…`）+ `expected_stats.md`
+  （手算值）+ `PROVENANCE.md`（冻结时随附分类）
+- 冻结前验证（D-003(2) 同规格）：
+  1. 基线绿：repo_frozen 存量 28/28 通过（冻结前复验）
+  2. 神谕红绿逻辑：未改动仓库 spec-direct 5 红 / edge 3 绿；实验者原型
+     实现（CTE 窗口函数，封存件内详述）8/8 绿
+  3. relevant-files 机械推导（下方）
+  4. 盲化规则：惯例分析封存件 `tasks/T3/convention_analysis_SEALED.md`
+     于神谕与冻结之后单独提交（git 提交顺序=写入顺序证明）；task.md/
+     oracle/相关文件清单均不引用其内容
+- 与 T1 的两处差异（如实记录）：(a) oracle 断言用 oracle 侧 fixture 副本
+  调用 CLI，较 T1（读 agent 工作副本 repro/）加固防篡改；(b) PROVENANCE
+  于冻结时随附（T1 为冻结后审计补做）
+- 冻结 commit：`7ff9310`（主体）+ 本文件更新 commit（见 git log）
+
+## T3 relevant-files 推导（侦察覆盖率分母，防反推收窄）
+
+推导规则（机械，先于清单）：任务文本引用的公开行为面（默认报表输出、
+bytes_sent 统计、平均值并见）+ 承载这些面的实现文件 + 覆盖这些面的既有
+测试与文档。
+
+清单（4 项）：
+1. `ngxtop/ngxtop.py`（CLI 入口、DEFAULT_QUERIES、查询执行与输出）
+2. `README.rst`（默认报表公开文档面，含输出样例）
+3. `tests/test_characterization.py`（钉默认输出行为的既有特征化测试）
+4. `tests/test_parse_log.py`（日志解析/字段面既有测试参考）
+
+自检：实验者参考实现仅改动 ngxtop/ngxtop.py；本清单宽于实现所需
+（README 与两项测试按规格面规则保留），不存在收窄偏置。
+
+## T3 运行排序（D-003(3)）
+
+第二轮@30 之后、在 T2 运行之后（与 T2 排序以届时执行序列为准）。
+
