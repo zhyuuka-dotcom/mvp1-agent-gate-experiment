@@ -1,3 +1,18 @@
 C1|RUN 侦察（结构+repro 配置）
 C2|RUN 侦察（日志+目录）
 C3|READ config_parser.py
+C1|RUN 全景侦察
+C2|RUN 目录+README
+C3|READ config_parser（6032 真基线）
+C4|RUN 复现
+C5|RUN 复现（修正路径）→0 条
+C6|RUN grep 格式使用点
+C7|RUN 读 process() 区段+utils
+C8|RUN pattern 对照实验
+C9|RUN get_log_formats 解析验证
+C10|RUN build_pattern('main') 反证
+C11|RUN 读两测试文件
+C12|RUN -f common 对照（内置名工作）
+C13|RUN combined 对照+多行 conf 验证
+C14|畸形嵌套→RUN_NOARG 机械错误
+C15|RUN sed 读前 90 行（封顶）

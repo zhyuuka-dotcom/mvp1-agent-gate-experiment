@@ -107,6 +107,10 @@ def do_read(p_raw):
     emit(c); return f"READ_OK {p} {len(c)}ch"
 
 def do_run(cmd):
+    # v5（C-T14 执行前落盘）：RUN 缺 command 参数 → 机械校验错误回执
+    # （模型出现 RUN 外壳包裹 READ 的畸形嵌套，不猜测其意图）
+    if not cmd or not cmd.strip():
+        emit("RUN 错误: 缺少 command 参数（工具调用结构畸形）"); return "RUN_NOARG"
     if re.search(r"rm\s+-rf\s+/(?!tmp|home)|mkfs|shutdown|reboot", cmd):
         emit(f"RUN 拒绝: 命令被安全策略拦截: {cmd}"); return "RUN_BLOCKED"
     try:
