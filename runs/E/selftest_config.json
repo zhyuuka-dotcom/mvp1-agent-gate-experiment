@@ -1,0 +1,8 @@
+{
+  "oracle_hidden": "runs/E/selftest_oracle",
+  "harness_python": "repo_frozen/.venv/bin/python",
+  "spec_tests": ["test_mock_spec_always", "test_mock_spec_mark"],
+  "edge_tests": ["test_mock_edge_always"],
+  "baseline_tests_dir": "repo_frozen/tests",
+  "_comment": "INDEPENDENT_ACCEPTANCE 自测配置（mock 神谕；PASS/FAIL 路径与存量/新测试文件遥测列验证用）"
+}

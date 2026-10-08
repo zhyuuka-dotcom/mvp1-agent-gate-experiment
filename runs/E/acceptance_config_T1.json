@@ -1,0 +1,18 @@
+{
+  "oracle_hidden": "tasks/T1/oracle/hidden",
+  "harness_python": "repo_frozen/.venv/bin/python",
+  "spec_tests": [
+    "test_named_format_single_line",
+    "test_named_format_multiline",
+    "test_stats_match_log_content",
+    "test_named_format_selects_right_one",
+    "test_unknown_name_clean_error"
+  ],
+  "edge_tests": [
+    "test_direct_format_string_unchanged",
+    "test_default_combined_unchanged",
+    "test_multi_group_by_unchanged"
+  ],
+  "baseline_tests_dir": "repo_frozen/tests",
+  "_comment": "E@15 真跑配置（T1 冻结神谕 5 spec + 3 edge；存量 28；spec/edge 分组=冻结分组）"
+}
