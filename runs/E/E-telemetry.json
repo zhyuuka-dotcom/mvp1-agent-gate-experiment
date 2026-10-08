@@ -1,0 +1,112 @@
+{
+ "arm": "E",
+ "task": "T1",
+ "cap": 15,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1629ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/combined.log 171ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/nginx.conf 292ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/access.log 764ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=74ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/nginx_multiline.conf 342ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1091ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_characterization.py 1286ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_parse_log.py 4551ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_config_parser.py 3157ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=416ch"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "turns_spent_before_first_write": null,
+ "first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "usage_rows": [
+  "2026-10-09 04:44:42\tdeepseek-flash\tdisabled\toff-peak\t1238\t71\t0.00023",
+  "2026-10-09 04:44:43\tdeepseek-flash\tdisabled\toff-peak\t1323\t54\t0.00006",
+  "2026-10-09 04:44:44\tdeepseek-flash\tdisabled\toff-peak\t2241\t33\t0.00016",
+  "2026-10-09 04:44:44\tdeepseek-flash\tdisabled\toff-peak\t2377\t20\t0.00004",
+  "2026-10-09 04:44:45\tdeepseek-flash\tdisabled\toff-peak\t2488\t14\t0.00004",
+  "2026-10-09 04:44:46\tdeepseek-flash\tdisabled\toff-peak\t2930\t16\t0.00008",
+  "2026-10-09 04:44:46\tdeepseek-flash\tdisabled\toff-peak\t4461\t23\t0.00024",
+  "2026-10-09 04:44:47\tdeepseek-flash\tdisabled\toff-peak\t10060\t141\t0.00092",
+  "2026-10-09 04:44:48\tdeepseek-flash\tdisabled\toff-peak\t10256\t68\t0.00006",
+  "2026-10-09 04:44:49\tdeepseek-flash\tdisabled\toff-peak\t10420\t47\t0.00006",
+  "2026-10-09 04:44:50\tdeepseek-flash\tdisabled\toff-peak\t10868\t72\t0.00012",
+  "2026-10-09 04:44:51\tdeepseek-flash\tdisabled\toff-peak\t11374\t15\t0.00008",
+  "2026-10-09 04:44:52\tdeepseek-flash\tdisabled\toff-peak\t12685\t91\t0.00027",
+  "2026-10-09 04:44:53\tdeepseek-flash\tdisabled\toff-peak\t12792\t7\t0.00004",
+  "2026-10-09 04:44:54\tdeepseek-flash\tdisabled\toff-peak\t13461\t60\t0.00015"
+ ]
+}
