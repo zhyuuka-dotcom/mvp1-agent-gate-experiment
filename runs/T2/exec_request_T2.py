@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """T2 E/C 臂请求执行器——exec_request_e + T2 丙校验器（D-014）。
-与 runs/E/exec_request_e.py 唯一差异：VALIDATOR 指向 validate_plan_T2.py。
+与 runs/E/exec_request_e.py 的精确 diff 库存（D-015 §3 文档修正要求，
+共 3 处，STATE_PATH 两版相同——T1 E 执行器本已 env 化，无该项差异）：
+  ① docstring（本文件头两行）
+  ② VALIDATOR 指针：runs/C/validate_plan.py → runs/T2/validate_plan_T2.py（D-014 丙）
+  ③ 截断 WRITE 分支正则补 re.M（D-015(2) 采；T1 执行器该分支缺 re.M——
+     文中截断写入落入 NO_ACTION 的 quirk，T2-C/E 修复对齐闭合分支）
 机制：与 C 完全一致（PLAN.md 门禁 + DSML 双格式 + 纯文本协议 + RUN/READ
 不受限）；DONE 检测在前（exit 99），验收由循环驱动器 run_e.py 接管
 （INDEPENDENT_ACCEPTANCE，四行回执作为该轮回填）。

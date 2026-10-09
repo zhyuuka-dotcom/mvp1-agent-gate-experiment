@@ -7,7 +7,8 @@
 - E：同 C + INDEPENDENT_ACCEPTANCE 回执回填循环（PASS→结束）
 mechanics：runs/T2/mechanics_T2_{A,C,E}[_final].md（A=T1 冻结原文；
 C/E=丙终文）；TASK=tasks/T2/task.md；验收配置=runs/E/acceptance_config_T2.json。
-第二轮@30：cap=30，mechanics 单行 cap 改写（T1 先例）。
+第二轮@30：cap=30 + cap 行窄正则改写（D-015 §4 修复；T1 先例=预改写
+文件方案，本驱动=运行时改写，快照均=实际发送文本）。
 """
 import json
 import os
@@ -45,6 +46,7 @@ EXECUTOR = {
 GATED = ARM in ("C", "E")
 TURNS = RUN / "turns"
 LOG = RUN / "run.log"
+SENT_MECH = None  # setup() 填充：实际发送的 mechanics 文本（D-015 cap 修复）
 
 
 def log(msg):
@@ -55,16 +57,29 @@ def log(msg):
 
 
 def setup():
+    """D-015 §4 BLOCKER 修复：cap 行窄正则改写（仅"共 15 轮上限"→
+    "共 {CAP} 轮上限"）；快照 mechanics.txt = 实际发送文本（@15 与批准
+    文件逐字节一致——CAP==15 时零改写直用原文；@30 含唯一改写行）；
+    冻结批准文件本身零改动（只读）。"""
     if RUN.exists():
         shutil.rmtree(RUN)
     TURNS.mkdir(parents=True)
     shutil.copytree(FROZEN, RUN / "repo", symlinks=True)
-    shutil.copy(MECH, RUN / "mechanics.txt")
-    log(f"setup T2 arm={ARM} repo=frozen 树 cap={CAP}")
+    mech_text = MECH.read_text(encoding="utf-8")
+    if CAP != 15:
+        cap_pat = re.compile(r"共 15 轮上限")
+        hits = cap_pat.findall(mech_text)
+        assert len(hits) == 1, f"cap 行窄正则须恰命中 1 处，实际 {len(hits)}"
+        mech_text = cap_pat.sub(f"共 {CAP} 轮上限", mech_text, count=1)
+    (RUN / "mechanics.txt").write_text(mech_text, encoding="utf-8")
+    global SENT_MECH
+    SENT_MECH = mech_text
+    log(f"setup T2 arm={ARM} repo=frozen 树 cap={CAP}"
+        f"（mechanics 改写：{'无（@15 原文直用）' if CAP == 15 else 'cap 行→' + str(CAP)}）")
 
 
 def call_model(prompt):
-    mech = open(MECH, encoding="utf-8").read()
+    mech = SENT_MECH  # 实际发送文本（含 cap 改写；快照=RUN/mechanics.txt）
     for attempt in range(1, 4):
         try:
             r = subprocess.run(
@@ -88,7 +103,7 @@ def main():
             "turns_spent_before_first_write": None, "plan_attempts": 0,
             "plan_rejections": 0, "amendments": 0, "dsml_events": [],
             "self_report_parse": [], "new_test_files": [],
-            "quote_clause": "gamma-D014"}
+            "quote_clause": "gamma-D014", "truncation_events": 0}
     prompt = open(TASK, encoding="utf-8").read()
     done = False
     for t in range(1, CAP + 1):
@@ -158,6 +173,8 @@ def main():
         if "畸形标记" in (fb_path.read_text(encoding="utf-8")
                        if fb_path.exists() else ""):
             tele["dsml_events"].append(t)
+        if "WRITE_TRUNCATED" in summary:
+            tele["truncation_events"] += 1  # D-015(2)：截断计数（分臂）
         prompt = fb_path.read_text(encoding="utf-8") if fb_path.exists() else ""
         if not prompt.strip():
             prompt = ("（未识别到工具请求。请发出 READ / RUN / WRITE 请求，"
