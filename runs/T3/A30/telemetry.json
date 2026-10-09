@@ -1,0 +1,229 @@
+{
+ "arm": "T3-A",
+ "task": "T3",
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3272ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=390ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1267ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1091ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=427ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1378ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=898ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1484ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=387ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_characterization.py 1286ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/utils.py 548ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_NOCONTENT"
+  },
+  {
+   "t": 15,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=5ch"
+  },
+  {
+   "t": 17,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=308ch"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1716ch"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=847ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 21,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1237ch"
+  },
+  {
+   "t": 22,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_parse_log.py 4551ch"
+  },
+  {
+   "t": 23,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_NOCONTENT"
+  },
+  {
+   "t": 24,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_OK tests/test_median_bytes_sent.py 1510B"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=289ch"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=128 out=15ch"
+  },
+  {
+   "t": 27,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2563ch"
+  },
+  {
+   "t": 28,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 29,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=745ch"
+  },
+  {
+   "t": 30,
+   "exec_rc": 99,
+   "exec_summary": "DONE_DETECTED",
+   "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 33/33\n自报 0/0"
+  }
+ ],
+ "done_attempts": 1,
+ "done_receipts": [
+  {
+   "t": 30,
+   "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 33/33\n自报 0/0"
+  }
+ ],
+ "outcome": "DONE_END",
+ "fdv": {
+  "valid": true,
+  "turn": 30,
+  "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 33/33\n自报 0/0",
+  "counts": {
+   "spec": [
+    5,
+    5
+   ],
+   "edge": [
+    3,
+    3
+   ],
+   "existing": [
+    33,
+    33
+   ],
+   "self_reported": [
+    0,
+    0
+   ]
+  }
+ },
+ "cap_hit": false,
+ "first_write": "tests/test_median_bytes_sent.py",
+ "turns_spent_before_first_write": 23,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [
+  15,
+  20,
+  28
+ ],
+ "self_report_parse": [
+  {
+   "t": 30,
+   "declarations": [],
+   "counts": {
+    "spec": [
+     5,
+     5
+    ],
+    "edge": [
+     3,
+     3
+    ],
+    "existing": [
+     33,
+     33
+    ],
+    "self_reported": [
+     0,
+     0
+    ]
+   }
+  }
+ ],
+ "new_test_files": [
+  "test_median_bytes_sent.py"
+ ],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 0
+}

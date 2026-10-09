@@ -1,0 +1,38 @@
+diff -r '--exclude=.venv' '--exclude=__pycache__' '--exclude=.pytest_cache' /home/z/my-project/learnhub/lab/mvp1/repo_frozen/ngxtop/ngxtop.py /tmp/t3a15/repo/ngxtop/ngxtop.py
+91a92
+>        median(bytes_sent)                          AS median_bytes_sent,
+104a106
+>        median(bytes_sent)                          AS median_bytes_sent,
+430a433,462
+> class _MedianAggregate(object):
+>     """SQLite aggregate computing the median of a set of numeric values.
+> 
+>     NULL values are ignored, matching avg()'s behaviour.  The median is the
+>     conventional middle value: for an even count it is the mean of the two
+>     central values, so it stays consistent with avg() for small samples.
+>     """
+> 
+>     def __init__(self):
+>         self.values = []
+> 
+>     def step(self, value):
+>         if value is None:
+>             return
+>         try:
+>             self.values.append(float(value))
+>         except (TypeError, ValueError):
+>             pass
+> 
+>     def finalize(self):
+>         if not self.values:
+>             return None
+>         self.values.sort()
+>         n = len(self.values)
+>         mid = n // 2
+>         if n % 2 == 1:
+>             return self.values[mid]
+>         return (self.values[mid - 1] + self.values[mid]) / 2.0
+> 
+> 
+441a474
+>         self.conn.create_aggregate('median', 1, _MedianAggregate)

@@ -1,0 +1,18 @@
+{
+  "oracle_hidden": "tasks/T3/oracle/hidden",
+  "harness_python": "repo_frozen/.venv/bin/python",
+  "spec_tests": [
+    "test_summary_has_median_column",
+    "test_detailed_has_median_column",
+    "test_median_value_summary",
+    "test_median_value_per_group",
+    "test_median_adjacent_to_avg"
+  ],
+  "edge_tests": [
+    "test_avg_bytes_sent_unchanged",
+    "test_status_count_columns_unchanged",
+    "test_default_grouping_unchanged"
+  ],
+  "baseline_tests_dir": "repo_frozen/tests",
+  "_comment": "T3 运行验收配置（D-003 冻结神谕；惯例探针：spec 5 中 3 条 convention-derived=三省略参数测量点）"
+}

@@ -1,0 +1,62 @@
+[03:02:16] setup T3 arm=E repo=frozen 树 cap=30（mechanics 改写：cap 行→30）
+[03:02:17] T1: response 99ch
+[03:02:17] T1: exec rc=0 READ_MISS
+[03:02:18] T2: response 49ch
+[03:02:18] T2: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[03:02:19] T3: response 211ch
+[03:02:19] T3: exec rc=0 READ_OK README.rst 10423ch
+[03:02:25] T4: response 5158ch
+[03:02:25] T4: exec rc=0 READ_OK repro/access.log 764ch
+[03:02:30] T5: response 3103ch
+[03:02:30] T5: exec rc=0 RUN_OK rc=0 out=1373ch
+[03:02:31] T6: response 983ch
+[03:02:31] T6: exec rc=0 READ_OK tests/test_characterization.py 1286ch
+[03:02:36] T7: response 3634ch
+[03:02:36] T7: exec rc=0 RUN_OK rc=2 out=74ch
+[03:02:38] T8: response 968ch
+[03:02:38] T8: exec rc=0 RUN_OK rc=0 out=1268ch
+[03:02:40] T9: response 1997ch
+[03:02:40] T9: exec rc=0 RUN_OK rc=0 out=712ch
+[03:02:45] T10: response 3108ch
+[03:02:45] T10: exec rc=0 PLAN_REJECTED a1
+[03:02:48] T11: response 2009ch
+[03:02:48] T11: exec rc=0 PLAN_REJECTED a2
+[03:02:52] T12: response 2430ch
+[03:02:52] T12: exec rc=0 PLAN_APPROVED a3
+[03:02:58] T13: response 7956ch
+[03:02:58] T13: exec rc=0 WRITE_TRUNCATED
+[03:02:59] T14: response 274ch
+[03:02:59] T14: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[03:03:03] T15: response 3857ch
+[03:03:03] T15: exec rc=0 RUN_OK rc=0 out=99ch
+[03:03:09] T16: response 8264ch
+[03:03:09] T16: exec rc=0 WRITE_TRUNCATED
+[03:03:16] T17: response 6758ch
+[03:03:16] T17: exec rc=0 RUN_OK rc=2 out=74ch
+[03:03:18] T18: response 1426ch
+[03:03:18] T18: exec rc=0 RUN_OK rc=0 out=5ch
+[03:03:19] T19: response 303ch
+[03:03:19] T19: exec rc=0 RUN_OK rc=0 out=307ch
+[03:03:20] T20: response 408ch
+[03:03:20] T20: exec rc=0 RUN_OK rc=0 out=10ch
+[03:03:21] T21: response 426ch
+[03:03:22] T21: exec rc=0 RUN_OK rc=0 out=1218ch
+[03:03:23] T22: response 543ch
+[03:03:23] T22: exec rc=0 RUN_OK rc=0 out=292ch
+[03:03:25] T23: response 942ch
+[03:03:25] T23: exec rc=0 RUN_OK rc=2 out=385ch
+[03:03:26] T24: response 332ch
+[03:03:26] T24: exec rc=0 RUN_OK rc=0 out=1622ch
+[03:03:28] T25: response 1104ch
+[03:03:28] T25: exec rc=0 RUN_OK rc=0 out=3ch
+[03:03:29] T26: response 292ch
+[03:03:30] T26: exec rc=0 RUN_OK rc=0 out=265ch
+[03:03:31] T27: response 526ch
+[03:03:31] T27: exec rc=0 RUN_OK rc=0 out=264ch
+[03:03:36] T28: response 4773ch
+[03:03:36] T28: exec rc=0 WRITE_OK tests/test_median.py
+[03:03:36] T29: response 86ch
+[03:03:38] T29: exec rc=0 RUN_OK rc=1 out=2244ch
+[03:03:39] T30: response 1301ch
+[03:03:39] T30: exec rc=0 RUN_OK rc=1 out=99ch
+[03:03:39] END: outcome=CAP done_attempts=0 cap_hit=True

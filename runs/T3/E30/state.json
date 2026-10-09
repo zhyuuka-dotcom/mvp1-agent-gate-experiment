@@ -1,0 +1,11 @@
+{
+ "phase": "PLAN_APPROVED",
+ "whitelist": [
+  "ngxtop/ngxtop.py",
+  "README.rst",
+  "tests/test_median.py"
+ ],
+ "plan_attempts": 3,
+ "plan_rejections": 2,
+ "amendments": 0
+}

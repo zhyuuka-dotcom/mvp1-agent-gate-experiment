@@ -1,0 +1,172 @@
+{
+ "arm": "T3-E",
+ "task": "T3",
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK README.rst 10423ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK repro/access.log 764ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1373ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_characterization.py 1286ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=74ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1268ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=712ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a1"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a2"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_APPROVED a3"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_TRUNCATED"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=99ch"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_TRUNCATED"
+  },
+  {
+   "t": 17,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=74ch"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=5ch"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=307ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=10ch"
+  },
+  {
+   "t": 21,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1218ch"
+  },
+  {
+   "t": 22,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=292ch"
+  },
+  {
+   "t": 23,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=385ch"
+  },
+  {
+   "t": 24,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1622ch"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3ch"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=265ch"
+  },
+  {
+   "t": 27,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=264ch"
+  },
+  {
+   "t": 28,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_OK tests/test_median.py"
+  },
+  {
+   "t": 29,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=1 out=2244ch"
+  },
+  {
+   "t": 30,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=1 out=99ch"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": "tests/test_median.py",
+ "turns_spent_before_first_write": 27,
+ "plan_attempts": 1,
+ "plan_rejections": 2,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 2
+}

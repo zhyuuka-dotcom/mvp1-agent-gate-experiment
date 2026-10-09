@@ -1,0 +1,46 @@
+{
+ "ts": 1791572480.9043355,
+ "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 33/33\n自报 0/0",
+ "passed": true,
+ "counts": {
+  "spec": [
+   5,
+   5
+  ],
+  "edge": [
+   3,
+   3
+  ],
+  "existing": [
+   33,
+   33
+  ],
+  "self_reported": [
+   0,
+   0
+  ]
+ },
+ "oracle_per_test": {
+  "test_summary_has_median_column": true,
+  "test_detailed_has_median_column": true,
+  "test_median_value_summary": true,
+  "test_median_value_per_group": true,
+  "test_median_adjacent_to_avg": true,
+  "test_avg_bytes_sent_unchanged": true,
+  "test_status_count_columns_unchanged": true,
+  "test_default_grouping_unchanged": true
+ },
+ "self_report_details": [],
+ "new_test_files": [
+  "test_median_bytes_sent.py"
+ ],
+ "new_test_files_vs_declared": [
+  1,
+  0
+ ],
+ "integrity": {
+  "snapshot": "/tmp/t3a30/fdv-snapshots/fdv-snapshot-done-1791572477.tar.gz",
+  "errors": []
+ },
+ "dsml": null
+}

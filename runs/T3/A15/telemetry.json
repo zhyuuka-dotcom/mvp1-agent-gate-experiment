@@ -1,0 +1,102 @@
+{
+ "arm": "T3-A",
+ "task": "T3",
+ "cap": 15,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3272ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=707ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1681ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1574ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=5421ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 8,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=7445ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=4012ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2363ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=11ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [
+  7,
+  8,
+  13,
+  15
+ ],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 0
+}

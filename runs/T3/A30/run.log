@@ -1,0 +1,63 @@
+[03:00:15] setup T3 arm=A repo=frozen 树 cap=30（mechanics 改写：cap 行→30）
+[03:00:15] T1: response 294ch
+[03:00:15] T1: exec rc=0 RUN_OK rc=0 out=3272ch
+[03:00:16] T2: response 188ch
+[03:00:16] T2: exec rc=0 RUN_OK rc=0 out=390ch
+[03:00:17] T3: response 154ch
+[03:00:17] T3: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[03:00:18] T4: response 369ch
+[03:00:18] T4: exec rc=0 RUN_OK rc=0 out=1267ch
+[03:00:20] T5: response 277ch
+[03:00:20] T5: exec rc=0 RUN_OK rc=0 out=1091ch
+[03:00:21] T6: response 300ch
+[03:00:21] T6: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[03:00:22] T7: response 474ch
+[03:00:23] T7: exec rc=0 RUN_OK rc=0 out=427ch
+[03:00:24] T8: response 915ch
+[03:00:25] T8: exec rc=0 RUN_OK rc=0 out=1378ch
+[03:00:26] T9: response 833ch
+[03:00:27] T9: exec rc=0 RUN_OK rc=0 out=898ch
+[03:00:29] T10: response 1042ch
+[03:00:29] T10: exec rc=0 RUN_OK rc=0 out=1484ch
+[03:00:30] T11: response 414ch
+[03:00:30] T11: exec rc=0 RUN_OK rc=0 out=387ch
+[03:00:31] T12: response 168ch
+[03:00:31] T12: exec rc=0 READ_OK tests/test_characterization.py 1286ch
+[03:00:35] T13: response 2174ch
+[03:00:35] T13: exec rc=0 READ_OK ngxtop/utils.py 548ch
+[03:00:40] T14: response 5868ch
+[03:00:40] T14: exec rc=0 WRITE_NOCONTENT
+[03:00:46] T15: response 8250ch
+[03:00:46] T15: exec rc=98 NO_ACTION
+[03:00:49] T16: response 3384ch
+[03:00:49] T16: exec rc=0 RUN_OK rc=0 out=5ch
+[03:00:50] T17: response 282ch
+[03:00:50] T17: exec rc=0 RUN_OK rc=0 out=308ch
+[03:00:52] T18: response 729ch
+[03:00:52] T18: exec rc=0 RUN_OK rc=0 out=1716ch
+[03:00:54] T19: response 478ch
+[03:00:55] T19: exec rc=0 RUN_OK rc=0 out=847ch
+[03:00:56] T20: response 869ch
+[03:00:56] T20: exec rc=98 NO_ACTION
+[03:00:58] T21: response 737ch
+[03:00:59] T21: exec rc=0 RUN_OK rc=0 out=1237ch
+[03:01:01] T22: response 935ch
+[03:01:01] T22: exec rc=0 READ_OK tests/test_parse_log.py 4551ch
+[03:01:03] T23: response 1766ch
+[03:01:03] T23: exec rc=0 WRITE_NOCONTENT
+[03:01:06] T24: response 1920ch
+[03:01:06] T24: exec rc=0 WRITE_OK tests/test_median_bytes_sent.py 1510B
+[03:01:06] T25: response 279ch
+[03:01:08] T25: exec rc=0 RUN_OK rc=0 out=289ch
+[03:01:10] T26: response 1362ch
+[03:01:10] T26: exec rc=0 RUN_OK rc=128 out=15ch
+[03:01:12] T27: response 336ch
+[03:01:12] T27: exec rc=0 RUN_OK rc=0 out=2563ch
+[03:01:13] T28: response 452ch
+[03:01:13] T28: exec rc=98 NO_ACTION
+[03:01:14] T29: response 316ch
+[03:01:15] T29: exec rc=0 RUN_OK rc=0 out=745ch
+[03:01:17] T30: response 840ch
+[03:01:17] T30: exec rc=99 DONE_DETECTED
+[03:01:20] T30: DONE -> 离线验收 ACCEPTANCE PASS
+[03:01:20] END: outcome=DONE_END done_attempts=1 cap_hit=False

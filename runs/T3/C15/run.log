@@ -1,0 +1,32 @@
+[02:59:14] setup T3 arm=C repo=frozen 树 cap=15（mechanics 改写：无（@15 原文直用））
+[02:59:15] T1: response 231ch
+[02:59:15] T1: exec rc=0 READ_MISS
+[02:59:16] T2: response 291ch
+[02:59:16] T2: exec rc=0 RUN_OK rc=0 out=984ch
+[02:59:17] T3: response 380ch
+[02:59:17] T3: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch; READ_OK ngxtop/utils.py 548ch
+[02:59:19] T4: response 543ch
+[02:59:19] T4: exec rc=0 READ_OK repro/combined.log 171ch
+[02:59:20] T5: response 349ch
+[02:59:20] T5: exec rc=0 RUN_OK rc=0 out=1162ch
+[02:59:21] T6: response 199ch
+[02:59:21] T6: exec rc=0 READ_OK tests/test_characterization.py 1286ch
+[02:59:22] T7: response 557ch
+[02:59:22] T7: exec rc=0 RUN_OK rc=0 out=1130ch
+[02:59:23] T8: response 266ch
+[02:59:25] T8: exec rc=0 RUN_OK rc=0 out=847ch
+[02:59:26] T9: response 310ch
+[02:59:26] T9: exec rc=0 RUN_OK rc=0 out=434ch
+[02:59:27] T10: response 328ch
+[02:59:27] T10: exec rc=0 READ_OK repro/nginx.conf 292ch
+[02:59:29] T11: response 473ch
+[02:59:29] T11: exec rc=0 RUN_OK rc=0 out=1859ch
+[02:59:30] T12: response 436ch
+[02:59:30] T12: exec rc=0 RUN_OK rc=0 out=495ch
+[02:59:31] T13: response 322ch
+[02:59:31] T13: exec rc=98 NO_ACTION
+[02:59:33] T14: response 259ch
+[02:59:33] T14: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[02:59:34] T15: response 698ch
+[02:59:34] T15: exec rc=0 RUN_OK rc=0 out=757ch
+[02:59:34] END: outcome=CAP done_attempts=0 cap_hit=True

@@ -1,0 +1,6 @@
+A15 离线终态: 8 passed in 2.25s
+C15 离线终态: 5 failed, 3 passed in 2.49s
+E15 离线终态: 5 failed, 3 passed in 2.06s
+C30 离线终态: 5 failed, 3 passed in 2.04s
+E30 离线终态: 8 passed in 2.28s
+A30: DONE 内验收 PASS（acceptance-t30.json 在档）

@@ -1,0 +1,32 @@
+[02:58:48] setup T3 arm=A repo=frozen 树 cap=15（mechanics 改写：无（@15 原文直用））
+[02:58:49] T1: response 294ch
+[02:58:49] T1: exec rc=0 RUN_OK rc=0 out=3272ch
+[02:58:50] T2: response 287ch
+[02:58:50] T2: exec rc=0 RUN_OK rc=0 out=707ch
+[02:58:51] T3: response 154ch
+[02:58:51] T3: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:58:52] T4: response 375ch
+[02:58:52] T4: exec rc=0 RUN_OK rc=0 out=1681ch
+[02:58:54] T5: response 354ch
+[02:58:54] T5: exec rc=0 RUN_OK rc=0 out=1574ch
+[02:58:55] T6: response 378ch
+[02:58:55] T6: exec rc=0 RUN_OK rc=0 out=5421ch
+[02:58:56] T7: response 254ch
+[02:58:56] T7: exec rc=98 NO_ACTION
+[02:58:57] T8: response 172ch
+[02:58:57] T8: exec rc=98 NO_ACTION
+[02:58:58] T9: response 167ch
+[02:58:58] T9: exec rc=0 RUN_OK rc=0 out=7445ch
+[02:58:59] T10: response 622ch
+[02:59:00] T10: exec rc=0 RUN_OK rc=0 out=4012ch
+[02:59:02] T11: response 447ch
+[02:59:02] T11: exec rc=0 RUN_OK rc=0 out=2363ch
+[02:59:04] T12: response 1050ch
+[02:59:04] T12: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:59:10] T13: response 8187ch
+[02:59:10] T13: exec rc=98 NO_ACTION
+[02:59:13] T14: response 2280ch
+[02:59:13] T14: exec rc=0 RUN_OK rc=0 out=11ch
+[02:59:14] T15: response 251ch
+[02:59:14] T15: exec rc=98 NO_ACTION
+[02:59:14] END: outcome=CAP done_attempts=0 cap_hit=True
