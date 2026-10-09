@@ -1,0 +1,58 @@
+--- repo_frozen/ngxtop/ngxtop.py	2026-10-06 12:33:02.563867665 +0800
++++ /tmp/t2-impl/ngxtop/ngxtop.py	2026-10-09 03:42:49.156353680 +0800
+@@ -20,6 +20,7 @@
+     -o <var>, --order-by <var>  order of output for default query [default: count]
+     -n <number>, --limit <number>  limit the number of records included in report for top command [default: 10]
+     -a <exp> ..., --a <exp> ...  add exp (must be aggregation exp: sum, avg, min, max, etc.) into output
++    --output-format <fmt>  output format for the default report: table or json [default: table]
+ 
+     -v, --verbose  more verbose output
+     -d, --debug  print every line and parsed record
+@@ -432,8 +433,9 @@
+ # Records and statistic processor
+ # =================================
+ class SQLProcessor(object):
+-    def __init__(self, report_queries, fields, index_fields=None):
++    def __init__(self, report_queries, fields, index_fields=None, output_format='table'):
+         self.begin = False
++        self.output_format = output_format
+         self.report_queries = report_queries
+         self.index_fields = index_fields if index_fields is not None else []
+         self.column_list = ','.join(fields)
+@@ -456,6 +458,24 @@
+         duration = time.time() - self.begin
+         status = 'running for %.0f seconds, %d records processed: %.2f req/sec'
+         output = [status % (duration, count, count / duration)]
++        if getattr(self, 'output_format', 'table') == 'json':
++            sys.stderr.write(status % (duration, count, count / duration) + '\n')
++            report_json = {}
++            with closing(self.conn.cursor()) as cursor:
++                for query in self.report_queries:
++                    if isinstance(query, tuple):
++                        label, query = query
++                    else:
++                        label = ''
++                    cursor.execute(query)
++                    columns = [d[0] for d in cursor.description]
++                    rows = cursor.fetchall()
++                    key = 'summary' if label == 'Summary:' else 'detailed'
++                    if key == 'summary':
++                        report_json[key] = {c: rows[0][i] for i, c in enumerate(columns)}
++                    else:
++                        report_json[key] = [{c: r[i] for i, c in enumerate(columns)} for r in rows]
++            return json.dumps(report_json)
+         with closing(self.conn.cursor()) as cursor:
+             for query in self.report_queries:
+                 if isinstance(query, tuple):
+@@ -540,7 +560,10 @@
+     for field in fields:
+         processor_fields.extend(field.split(','))
+ 
+-    processor = SQLProcessor(report_queries, processor_fields)
++    output_format = arguments.get('--output-format', 'table')
++    if output_format not in ('table', 'json'):
++        error_exit('unknown output format: %s (expected table or json)' % output_format)
++    processor = SQLProcessor(report_queries, processor_fields, output_format=output_format)
+     return processor
+ 
+ 

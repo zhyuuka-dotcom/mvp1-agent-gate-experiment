@@ -140,3 +140,25 @@ bytes_sent 统计、平均值并见）+ 承载这些面的实现文件 + 覆盖�
 - 终报骨架预注册：docs/FINAL-REPORT-SKELETON.md
 - 后续运行面：T2（冻结后）→ T3（D-003 排序）
 
+## T2 冻结（D-013，2026-10-09 23:40 裁决 / 2026-10-10 00:2x 执行）
+
+- 裁决链：D-002（转 Benchmark-authored）→ D-006（盲推协议）→ 首轮
+  7/8=87.5% → D-009（文本 v2 增 bullet 8 + 修订轮盲推）→ 清单 v2
+  （flash 推导，资格裁定合格，comm/T2-BLIND-DERIVATION-v2-20261009-2310.md，
+  边界 `9ab86ba`）→ **复审计 8/8 = 100% ≥ 90%**（comm/PI-20261009-2340.md
+  §2）→ D-013 冻结令
+- 冻结物：tasks/T2/task.md（v2，706d3a8+a119fe4）+ oracle/（hidden 8
+  测试 + oracle 侧 fixtures + spec_notes/expected_stats——**自 f1e2109
+  一字未改**，V22 审计点；其过时头注按 D-013 §0 不改，过时性记
+  PROVENANCE）+ PROVENANCE.md（冻结时新增随附）
+- 冻结前验证（runs/T2/freeze-verification/，PROTOCOL v1.1 绿侧规则）：
+  红侧 = 无特性基线 4 红 1 空真 3 绿（invalid 测试空真：docopt 拒
+  未知选项与规格拒非法值同可观测行为，如实记录）；绿侧 = 参考实现
+  8/8；存量 = 28/28（参考实现仓）
+- 参考实现：runs/T2/reference-impl.patch（单文件补丁）+ NOTES——
+  **不在 agent 可见树**（repo_frozen 冻结树不含；V23 审计点）
+- 头注泄露裁定（D-013）：v2 修订注维持不使无效；规则修正=今后修订注
+  不入任务文件正文
+- 运行排序：mechanics_T2 批准后 flash×{A,C,E}×{15,30} 六次（D-013(3)；
+  D-007 TEST 语法首样本；FDV 首个正靶点）→ T3（D-003）
+

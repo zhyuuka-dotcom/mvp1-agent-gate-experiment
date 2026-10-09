@@ -1,0 +1,74 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- /home/z/my-project/learnhub/lab/mvp1/repo_frozen/.venv/bin/python
+rootdir: /home/z
+configfile: pyproject.toml
+collecting ... collected 8 items
+
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_json_structure_and_stdout_purity FAILED [ 12%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_json_summary_values FAILED [ 25%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_json_detailed_values FAILED [ 37%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_table_mode_unchanged FAILED [ 50%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_invalid_format_rejected PASSED [ 62%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_default_combined_tables PASSED [ 75%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_multi_group_by_unchanged PASSED [ 87%]
+tasks/T2/oracle/hidden/test_t2_hidden.py::test_access_direct_records PASSED [100%]
+
+=================================== FAILURES ===================================
+E   AssertionError: ning: invalid escape sequence '\['
+        matched = re.findall('\[default: (.*)\]', description, flags=re.I)
+      /tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\S'
+        split = re.split('\n *(<\S+?>|-\S+?)', doc)[1:]
+      Usage:
+          ngxtop [options]
+          ngxtop [options] (print|top|avg|sum) <var> ...
+          ngxtop info
+          ngxtop [options] query <query> ...
+      
+    assert 1 == 0
+     +  where 1 = CompletedProcess(args=['/tmp/t2-pristine2/.venv/bin/python', '-m', 'ngxtop.ngxtop', '-l', '/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/combined.log', '--no-follow', '--output-format', 'json'], returncode=1, stdout='', stderr="/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:165: SyntaxWarning: invalid escape sequence '\\S'\n  name = re.findall('(<\\S*?>)', source)[0]\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:166: SyntaxWarning: invalid escape sequence '\\['\n  value = re.findall('\\[default: (.*)\\]', source, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:207: SyntaxWarning: invalid escape sequence '\\['\n  matched = re.findall('\\[default: (.*)\\]', description, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\\S'\n  split = re.split('\\n *(<\\S+?>|-\\S+?)', doc)[1:]\nUsage:\n    ngxtop [options]\n    ngxtop [options] (print|top|avg|sum) <var> ...\n    ngxtop info\n    ngxtop [options] query <query> ...\n").returncode
+/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/hidden/test_t2_hidden.py:41: AssertionError: ning: invalid escape sequence '\['
+E   AssertionError: ning: invalid escape sequence '\['
+        matched = re.findall('\[default: (.*)\]', description, flags=re.I)
+      /tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\S'
+        split = re.split('\n *(<\S+?>|-\S+?)', doc)[1:]
+      Usage:
+          ngxtop [options]
+          ngxtop [options] (print|top|avg|sum) <var> ...
+          ngxtop info
+          ngxtop [options] query <query> ...
+      
+    assert 1 == 0
+     +  where 1 = CompletedProcess(args=['/tmp/t2-pristine2/.venv/bin/python', '-m', 'ngxtop.ngxtop', '-l', '/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/combined.log', '--no-follow', '--output-format', 'json'], returncode=1, stdout='', stderr="/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:165: SyntaxWarning: invalid escape sequence '\\S'\n  name = re.findall('(<\\S*?>)', source)[0]\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:166: SyntaxWarning: invalid escape sequence '\\['\n  value = re.findall('\\[default: (.*)\\]', source, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:207: SyntaxWarning: invalid escape sequence '\\['\n  matched = re.findall('\\[default: (.*)\\]', description, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\\S'\n  split = re.split('\\n *(<\\S+?>|-\\S+?)', doc)[1:]\nUsage:\n    ngxtop [options]\n    ngxtop [options] (print|top|avg|sum) <var> ...\n    ngxtop info\n    ngxtop [options] query <query> ...\n").returncode
+/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/hidden/test_t2_hidden.py:41: AssertionError: ning: invalid escape sequence '\['
+E   AssertionError: ning: invalid escape sequence '\['
+        matched = re.findall('\[default: (.*)\]', description, flags=re.I)
+      /tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\S'
+        split = re.split('\n *(<\S+?>|-\S+?)', doc)[1:]
+      Usage:
+          ngxtop [options]
+          ngxtop [options] (print|top|avg|sum) <var> ...
+          ngxtop info
+          ngxtop [options] query <query> ...
+      
+    assert 1 == 0
+     +  where 1 = CompletedProcess(args=['/tmp/t2-pristine2/.venv/bin/python', '-m', 'ngxtop.ngxtop', '-l', '/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/combined.log', '--no-follow', '--output-format', 'json'], returncode=1, stdout='', stderr="/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:165: SyntaxWarning: invalid escape sequence '\\S'\n  name = re.findall('(<\\S*?>)', source)[0]\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:166: SyntaxWarning: invalid escape sequence '\\['\n  value = re.findall('\\[default: (.*)\\]', source, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:207: SyntaxWarning: invalid escape sequence '\\['\n  matched = re.findall('\\[default: (.*)\\]', description, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\\S'\n  split = re.split('\\n *(<\\S+?>|-\\S+?)', doc)[1:]\nUsage:\n    ngxtop [options]\n    ngxtop [options] (print|top|avg|sum) <var> ...\n    ngxtop info\n    ngxtop [options] query <query> ...\n").returncode
+/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/hidden/test_t2_hidden.py:41: AssertionError: ning: invalid escape sequence '\['
+E   AssertionError: ning: invalid escape sequence '\['
+        matched = re.findall('\[default: (.*)\]', description, flags=re.I)
+      /tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\S'
+        split = re.split('\n *(<\S+?>|-\S+?)', doc)[1:]
+      Usage:
+          ngxtop [options]
+          ngxtop [options] (print|top|avg|sum) <var> ...
+          ngxtop info
+          ngxtop [options] query <query> ...
+      
+    assert 1 == 0
+     +  where 1 = CompletedProcess(args=['/tmp/t2-pristine2/.venv/bin/python', '-m', 'ngxtop.ngxtop', '-l', '/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/combined.log', '--no-follow', '--output-format', 'table'], returncode=1, stdout='', stderr="/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:165: SyntaxWarning: invalid escape sequence '\\S'\n  name = re.findall('(<\\S*?>)', source)[0]\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:166: SyntaxWarning: invalid escape sequence '\\['\n  value = re.findall('\\[default: (.*)\\]', source, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:207: SyntaxWarning: invalid escape sequence '\\['\n  matched = re.findall('\\[default: (.*)\\]', description, flags=re.I)\n/tmp/t2-pristine2/.venv/lib/python3.12/site-packages/docopt.py:456: SyntaxWarning: invalid escape sequence '\\S'\n  split = re.split('\\n *(<\\S+?>|-\\S+?)', doc)[1:]\nUsage:\n    ngxtop [options]\n    ngxtop [options] (print|top|avg|sum) <var> ...\n    ngxtop info\n    ngxtop [options] query <query> ...\n").returncode
+/home/z/my-project/learnhub/lab/mvp1/tasks/T2/oracle/hidden/test_t2_hidden.py:142: AssertionError: ning: invalid escape sequence '\['
+=========================== short test summary info ============================
+FAILED tasks/T2/oracle/hidden/test_t2_hidden.py::test_json_structure_and_stdout_purity
+FAILED tasks/T2/oracle/hidden/test_t2_hidden.py::test_json_summary_values - A...
+FAILED tasks/T2/oracle/hidden/test_t2_hidden.py::test_json_detailed_values - ...
+FAILED tasks/T2/oracle/hidden/test_t2_hidden.py::test_table_mode_unchanged - ...
+========================= 4 failed, 4 passed in 2.73s ==========================
