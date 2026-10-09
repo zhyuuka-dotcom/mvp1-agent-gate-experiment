@@ -1,0 +1,18 @@
+{
+  "oracle_hidden": "tasks/T2/oracle/hidden",
+  "harness_python": "repo_frozen/.venv/bin/python",
+  "spec_tests": [
+    "test_json_structure_and_stdout_purity",
+    "test_json_summary_values",
+    "test_json_detailed_values",
+    "test_table_mode_unchanged",
+    "test_invalid_format_rejected"
+  ],
+  "edge_tests": [
+    "test_default_combined_tables",
+    "test_multi_group_by_unchanged",
+    "test_access_direct_records"
+  ],
+  "baseline_tests_dir": "repo_frozen/tests",
+  "_comment": "T2 运行验收配置（D-013(3) 六次运行用；神谕已冻结 e78f1f2）"
+}
