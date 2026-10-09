@@ -1,0 +1,172 @@
+{
+ "arm": "T2-E",
+ "task": "T2",
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=411ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a1"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a2"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a3"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a4"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a5"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=190ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_APPROVED a6"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=74ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=96ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2694ch"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=74ch"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 17,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=1 out=968ch"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_TRUNCATED"
+  },
+  {
+   "t": 21,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_TRUNCATED"
+  },
+  {
+   "t": 22,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=798ch"
+  },
+  {
+   "t": 23,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 24,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=29ch"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2ch"
+  },
+  {
+   "t": 27,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=74ch"
+  },
+  {
+   "t": 28,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=1 out=53ch"
+  },
+  {
+   "t": 29,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=8ch"
+  },
+  {
+   "t": 30,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=8ch"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 1,
+ "plan_rejections": 5,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 2
+}

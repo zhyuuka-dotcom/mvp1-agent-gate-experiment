@@ -1,0 +1,61 @@
+diff -r '--exclude=.venv' '--exclude=__pycache__' '--exclude=.pytest_cache' /home/z/my-project/learnhub/lab/mvp1/repo_frozen/ngxtop/ngxtop.py /tmp/t2a15/repo/ngxtop/ngxtop.py
+22a23
+>     --output-format <fmt>  output format for the default report: table or json [default: table]
+117a119,120
+> VALID_OUTPUT_FORMATS = ('table', 'json')
+> 
+435c438
+<     def __init__(self, report_queries, fields, index_fields=None):
+---
+>     def __init__(self, report_queries, fields, index_fields=None, is_default_report=False):
+438a442
+>         self.is_default_report = is_default_report
+452,454c456,457
+<     def report(self):
+<         if not self.begin:
+<             return ''
+---
+>     def status_line(self):
+>         """Build the status line that prefixes the table report."""
+458c461,464
+<         output = [status % (duration, count, count / duration)]
+---
+>         return status % (duration, count, count / duration)
+> 
+>     def results(self):
+>         """Yield (label, columns, rows) for every report query."""
+466,468c472,482
+<                 columns = (d[0] for d in cursor.description)
+<                 result = tabulate.tabulate(cursor.fetchall(), headers=columns, tablefmt='orgtbl', floatfmt='.3f')
+<                 output.append('%s\n%s' % (label, result))
+---
+>                 columns = [d[0] for d in cursor.description]
+>                 rows = cursor.fetchall()
+>                 yield label, columns, rows
+> 
+>     def report(self):
+>         if not self.begin:
+>             return ''
+>         output = [self.status_line()]
+>         for label, columns, rows in self.results():
+>             result = tabulate.tabulate(rows, headers=columns, tablefmt='orgtbl', floatfmt='.3f')
+>             output.append('%s\n%s' % (label, result))
+469a484,501
+> 
+>     def json_report(self):
+>         """Build the structured JSON representation of the default report.
+> 
+>         Returns a dict with exactly two keys: 'summary' (an object) and
+>         'detailed' (an array of objects).
+>         """
+>         summary = {}
+>         detailed = []
+>         for idx, (label, columns, rows) in enumerate(self.results()):
+>             # The default report has exactly two queries: Summary then Detailed.
+>             if idx == 0:
+>                 if rows:
+>                     summary = dict(zip(columns, rows[0]))
+>             else:
+>                 for row in rows:
+>                     detailed.append(dict(zip(columns, row)))
+>         return {'summary': summary, 'detailed': detailed}

@@ -1,0 +1,44 @@
+{
+ "ts": 1791570429.1419113,
+ "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 28/28\n自报 0/0",
+ "passed": true,
+ "counts": {
+  "spec": [
+   5,
+   5
+  ],
+  "edge": [
+   3,
+   3
+  ],
+  "existing": [
+   28,
+   28
+  ],
+  "self_reported": [
+   0,
+   0
+  ]
+ },
+ "oracle_per_test": {
+  "test_json_structure_and_stdout_purity": true,
+  "test_json_summary_values": true,
+  "test_json_detailed_values": true,
+  "test_table_mode_unchanged": true,
+  "test_invalid_format_rejected": true,
+  "test_default_combined_tables": true,
+  "test_multi_group_by_unchanged": true,
+  "test_access_direct_records": true
+ },
+ "self_report_details": [],
+ "new_test_files": [],
+ "new_test_files_vs_declared": [
+  0,
+  0
+ ],
+ "integrity": {
+  "snapshot": "/tmp/t2a30/fdv-snapshots/fdv-snapshot-done-1791570424.tar.gz",
+  "errors": []
+ },
+ "dsml": null
+}

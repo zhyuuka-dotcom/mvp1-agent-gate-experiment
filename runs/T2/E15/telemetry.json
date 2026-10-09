@@ -1,0 +1,97 @@
+{
+ "arm": "T2-E",
+ "task": "T2",
+ "cap": 15,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=304ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2953ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/config_parser.py 6032ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_json_extraction_fix.py 2327ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/utils.py 548ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=187ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK tests/test_characterization.py 1286ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=208ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2694ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=2 out=158ch"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1305ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=591ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "PLAN_REJECTED a1"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3ch"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 1,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 0
+}

@@ -1,0 +1,32 @@
+[02:25:45] setup T2 arm=C repo=frozen 树 cap=15（mechanics 改写：无（@15 原文直用））
+[02:25:46] T1: response 348ch
+[02:25:46] T1: exec rc=0 RUN_OK rc=0 out=870ch
+[02:25:47] T2: response 216ch
+[02:25:47] T2: exec rc=0 READ_MISS
+[02:25:48] T3: response 297ch
+[02:25:48] T3: exec rc=0 RUN_OK rc=0 out=1008ch
+[02:25:49] T4: response 164ch
+[02:25:49] T4: exec rc=0 RUN_OK rc=0 out=7025ch
+[02:25:50] T5: response 266ch
+[02:25:50] T5: exec rc=0 RUN_NOARG
+[02:25:51] T6: response 189ch
+[02:25:51] T6: exec rc=0 RUN_OK rc=0 out=7024ch
+[02:25:52] T7: response 265ch
+[02:25:52] T7: exec rc=0 RUN_OK rc=0 out=2143ch
+[02:25:53] T8: response 626ch
+[02:25:53] T8: exec rc=0 RUN_OK rc=0 out=3375ch
+[02:25:54] T9: response 467ch
+[02:25:54] T9: exec rc=0 RUN_OK rc=0 out=1522ch
+[02:25:55] T10: response 360ch
+[02:25:56] T10: exec rc=0 RUN_OK rc=0 out=1684ch
+[02:26:01] T11: response 2820ch
+[02:26:01] T11: exec rc=0 WRITE_DENIED_NOPLAN
+[02:26:04] T12: response 2140ch
+[02:26:04] T12: exec rc=0 WRITE_DENIED_NOPLAN
+[02:26:06] T13: response 769ch
+[02:26:06] T13: exec rc=0 RUN_OK rc=0 out=406ch
+[02:26:09] T14: response 2180ch
+[02:26:09] T14: exec rc=0 WRITE_DENIED_NOPLAN
+[02:26:10] T15: response 653ch
+[02:26:10] T15: exec rc=0 RUN_OK rc=0 out=99ch
+[02:26:10] END: outcome=CAP done_attempts=0 cap_hit=True

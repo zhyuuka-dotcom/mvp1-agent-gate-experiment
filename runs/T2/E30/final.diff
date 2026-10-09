@@ -1,0 +1,8 @@
+Only in /tmp/t2e30/repo: PLAN.md
+diff -r '--exclude=.venv' '--exclude=__pycache__' '--exclude=.pytest_cache' /home/z/my-project/learnhub/lab/mvp1/repo_frozen/ngxtop/ngxtop.py /tmp/t2e30/repo/ngxtop/ngxtop.py
+20a21
+>     --output-format <fmt>  output format: table or json [default: table]
+81c82
+< import tabulate
+---
+> import tabulate  # MARKER_TEST

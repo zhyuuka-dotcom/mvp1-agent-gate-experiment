@@ -1,0 +1,62 @@
+[02:27:09] setup T2 arm=C repo=frozen 树 cap=30（mechanics 改写：cap 行→30）
+[02:27:10] T1: response 338ch
+[02:27:10] T1: exec rc=0 RUN_OK rc=0 out=3556ch
+[02:27:11] T2: response 216ch
+[02:27:11] T2: exec rc=0 RUN_OK rc=0 out=1203ch
+[02:27:12] T3: response 168ch
+[02:27:12] T3: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:27:13] T4: response 398ch
+[02:27:13] T4: exec rc=0 RUN_OK rc=0 out=1820ch
+[02:27:15] T5: response 285ch
+[02:27:16] T5: exec rc=0 RUN_OK rc=0 out=1268ch
+[02:27:17] T6: response 381ch
+[02:27:17] T6: exec rc=0 RUN_OK rc=0 out=1277ch
+[02:27:19] T7: response 437ch
+[02:27:19] T7: exec rc=0 RUN_OK rc=0 out=1630ch
+[02:27:20] T8: response 685ch
+[02:27:21] T8: exec rc=0 RUN_OK rc=0 out=638ch
+[02:27:22] T9: response 233ch
+[02:27:22] T9: exec rc=0 READ_MISS
+[02:27:23] T10: response 212ch
+[02:27:23] T10: exec rc=0 RUN_OK rc=0 out=34ch
+[02:27:26] T11: response 1476ch
+[02:27:26] T11: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:28] T12: response 1563ch
+[02:27:29] T12: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:30] T13: response 433ch
+[02:27:30] T13: exec rc=0 RUN_OK rc=0 out=136ch
+[02:27:32] T14: response 1634ch
+[02:27:32] T14: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:34] T15: response 830ch
+[02:27:34] T15: exec rc=0 RUN_OK rc=0 out=492ch
+[02:27:37] T16: response 2084ch
+[02:27:37] T16: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:40] T17: response 1669ch
+[02:27:40] T17: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:42] T18: response 856ch
+[02:27:42] T18: exec rc=0 RUN_OK rc=0 out=182ch
+[02:27:43] T19: response 372ch
+[02:27:43] T19: exec rc=0 RUN_OK rc=0 out=116ch
+[02:27:46] T20: response 1749ch
+[02:27:46] T20: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:49] T21: response 1647ch
+[02:27:49] T21: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:52] T22: response 2096ch
+[02:27:52] T22: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:54] T23: response 551ch
+[02:27:54] T23: exec rc=0 WRITE_DENIED_NOPLAN
+[02:27:55] T24: response 480ch
+[02:27:55] T24: exec rc=0 READ_MISS
+[02:27:58] T25: response 1677ch
+[02:27:58] T25: exec rc=0 WRITE_DENIED_NOPLAN
+[02:28:02] T26: response 2295ch
+[02:28:02] T26: exec rc=0 WRITE_DENIED_NOPLAN
+[02:28:05] T27: response 1550ch
+[02:28:05] T27: exec rc=98 NO_ACTION
+[02:28:06] T28: response 684ch
+[02:28:06] T28: exec rc=0 WRITE_DENIED_NOPLAN
+[02:28:09] T29: response 1867ch
+[02:28:09] T29: exec rc=0 WRITE_DENIED_NOPLAN
+[02:28:12] T30: response 1880ch
+[02:28:12] T30: exec rc=0 WRITE_DENIED_NOPLAN
+[02:28:12] END: outcome=CAP done_attempts=0 cap_hit=True

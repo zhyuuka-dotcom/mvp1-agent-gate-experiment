@@ -1,0 +1,1 @@
+[WRITE 拒绝: PERMISSION_DENIED] 计划合同尚未通过——先按合同格式提交 PLAN.md（READ/RUN 不受此限）

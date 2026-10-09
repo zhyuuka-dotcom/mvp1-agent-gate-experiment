@@ -1,0 +1,12 @@
+=== A15 离线神谕（终态）===
+4 failed, 4 passed in 2.20s
+=== C15 离线神谕（终态）===
+4 failed, 4 passed in 2.20s
+=== E15 离线神谕（终态）===
+4 failed, 4 passed in 2.47s
+=== A30 离线神谕（终态）===
+DONE 内验收（在档 acceptance-t16.json）：ACCEPTANCE PASS
+=== C30 离线神谕（终态）===
+4 failed, 4 passed in 2.07s
+=== E30 离线神谕（终态）===
+4 failed, 4 passed in 2.16s

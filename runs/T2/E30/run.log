@@ -1,0 +1,62 @@
+[02:28:12] setup T2 arm=E repo=frozen 树 cap=30（mechanics 改写：cap 行→30）
+[02:28:20] T1: response 6855ch
+[02:28:20] T1: exec rc=0 READ_MISS
+[02:28:22] T2: response 574ch
+[02:28:22] T2: exec rc=0 RUN_OK rc=0 out=411ch
+[02:28:29] T3: response 6477ch
+[02:28:30] T3: exec rc=0 PLAN_REJECTED a1
+[02:28:33] T4: response 2312ch
+[02:28:33] T4: exec rc=0 PLAN_REJECTED a2
+[02:28:36] T5: response 2345ch
+[02:28:36] T5: exec rc=0 PLAN_REJECTED a3
+[02:28:41] T6: response 4000ch
+[02:28:41] T6: exec rc=0 PLAN_REJECTED a4
+[02:28:48] T7: response 5076ch
+[02:28:48] T7: exec rc=0 PLAN_REJECTED a5
+[02:28:49] T8: response 937ch
+[02:28:49] T8: exec rc=0 RUN_OK rc=0 out=190ch
+[02:28:52] T9: response 1468ch
+[02:28:52] T9: exec rc=0 PLAN_APPROVED a6
+[02:28:58] T10: response 6400ch
+[02:28:58] T10: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[02:29:05] T11: response 6291ch
+[02:29:06] T11: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:29:13] T12: response 7780ch
+[02:29:13] T12: exec rc=0 RUN_OK rc=2 out=74ch
+[02:29:21] T13: response 7243ch
+[02:29:21] T13: exec rc=0 RUN_OK rc=0 out=96ch
+[02:29:28] T14: response 6377ch
+[02:29:29] T14: exec rc=0 RUN_OK rc=0 out=2694ch
+[02:29:37] T15: response 6274ch
+[02:29:37] T15: exec rc=0 RUN_OK rc=2 out=74ch
+[02:29:45] T16: response 6837ch
+[02:29:45] T16: exec rc=0 READ_MISS
+[02:29:48] T17: response 2643ch
+[02:29:49] T17: exec rc=0 RUN_OK rc=1 out=968ch
+[02:29:53] T18: response 3098ch
+[02:29:53] T18: exec rc=0 READ_MISS
+[02:29:57] T19: response 2993ch
+[02:29:57] T19: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:30:04] T20: response 8215ch
+[02:30:04] T20: exec rc=0 WRITE_TRUNCATED
+[02:30:10] T21: response 8178ch
+[02:30:10] T21: exec rc=0 WRITE_TRUNCATED
+[02:30:15] T22: response 5807ch
+[02:30:16] T22: exec rc=0 RUN_OK rc=0 out=798ch
+[02:30:23] T23: response 6521ch
+[02:30:23] T23: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:30:27] T24: response 2040ch
+[02:30:27] T24: exec rc=0 RUN_OK rc=0 out=29ch
+[02:30:30] T25: response 2493ch
+[02:30:30] T25: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:30:35] T26: response 3438ch
+[02:30:35] T26: exec rc=0 RUN_OK rc=0 out=2ch
+[02:30:42] T27: response 7238ch
+[02:30:42] T27: exec rc=0 RUN_OK rc=2 out=74ch
+[02:30:47] T28: response 4440ch
+[02:30:47] T28: exec rc=0 RUN_OK rc=1 out=53ch
+[02:30:51] T29: response 2476ch
+[02:30:51] T29: exec rc=0 RUN_OK rc=0 out=8ch
+[02:30:57] T30: response 5210ch
+[02:30:57] T30: exec rc=0 RUN_OK rc=0 out=8ch
+[02:30:57] END: outcome=CAP done_attempts=0 cap_hit=True

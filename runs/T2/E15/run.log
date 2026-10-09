@@ -1,0 +1,32 @@
+[02:26:11] setup T2 arm=E repo=frozen 树 cap=15（mechanics 改写：无（@15 原文直用））
+[02:26:12] T1: response 307ch
+[02:26:12] T1: exec rc=0 RUN_OK rc=0 out=304ch
+[02:26:13] T2: response 304ch
+[02:26:13] T2: exec rc=0 RUN_OK rc=0 out=2953ch
+[02:26:14] T3: response 212ch
+[02:26:14] T3: exec rc=0 READ_OK ngxtop/config_parser.py 6032ch
+[02:26:15] T4: response 73ch
+[02:26:15] T4: exec rc=0 READ_OK ngxtop/ngxtop.py 23519ch
+[02:26:16] T5: response 179ch
+[02:26:16] T5: exec rc=0 READ_OK tests/test_json_extraction_fix.py 2327ch
+[02:26:17] T6: response 229ch
+[02:26:17] T6: exec rc=0 READ_OK ngxtop/utils.py 548ch
+[02:26:18] T7: response 263ch
+[02:26:18] T7: exec rc=0 RUN_OK rc=2 out=187ch
+[02:26:19] T8: response 262ch
+[02:26:19] T8: exec rc=0 READ_OK tests/test_characterization.py 1286ch
+[02:26:21] T9: response 420ch
+[02:26:21] T9: exec rc=0 RUN_OK rc=2 out=208ch
+[02:26:22] T10: response 203ch
+[02:26:23] T10: exec rc=0 RUN_OK rc=0 out=2694ch
+[02:26:24] T11: response 467ch
+[02:26:24] T11: exec rc=0 RUN_OK rc=2 out=158ch
+[02:26:25] T12: response 325ch
+[02:26:26] T12: exec rc=0 RUN_OK rc=0 out=1305ch
+[02:26:27] T13: response 392ch
+[02:26:27] T13: exec rc=0 RUN_OK rc=0 out=591ch
+[02:26:31] T14: response 2579ch
+[02:26:31] T14: exec rc=0 PLAN_REJECTED a1
+[02:26:33] T15: response 418ch
+[02:26:33] T15: exec rc=0 RUN_OK rc=0 out=3ch
+[02:26:33] END: outcome=CAP done_attempts=0 cap_hit=True

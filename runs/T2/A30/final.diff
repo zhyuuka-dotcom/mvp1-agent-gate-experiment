@@ -1,0 +1,64 @@
+diff -r '--exclude=.venv' '--exclude=__pycache__' '--exclude=.pytest_cache' /home/z/my-project/learnhub/lab/mvp1/repo_frozen/ngxtop/ngxtop.py /tmp/t2a30/repo/ngxtop/ngxtop.py
+21a22
+>     --output-format <fmt>  output format: table or json [default: table]
+452,454c453
+<     def report(self):
+<         if not self.begin:
+<             return ''
+---
+>     def status_line(self):
+458c457,463
+<         output = [status % (duration, count, count / duration)]
+---
+>         return status % (duration, count, count / duration)
+> 
+>     def report_data(self):
+>         """Return structured report data: list of (label, columns, rows)."""
+>         if not self.begin:
+>             return []
+>         sections = []
+466,468c471,482
+<                 columns = (d[0] for d in cursor.description)
+<                 result = tabulate.tabulate(cursor.fetchall(), headers=columns, tablefmt='orgtbl', floatfmt='.3f')
+<                 output.append('%s\n%s' % (label, result))
+---
+>                 columns = [d[0] for d in cursor.description]
+>                 rows = cursor.fetchall()
+>                 sections.append((label, columns, rows))
+>         return sections
+> 
+>     def report(self):
+>         if not self.begin:
+>             return ''
+>         output = [self.status_line()]
+>         for label, columns, rows in self.report_data():
+>             result = tabulate.tabulate(rows, headers=columns, tablefmt='orgtbl', floatfmt='.3f')
+>             output.append('%s\n%s' % (label, result))
+470a485,497
+>     def report_json(self):
+>         """Return a JSON string with summary and detailed sections."""
+>         data = {'summary': {}, 'detailed': []}
+>         for label, columns, rows in self.report_data():
+>             label_text = (label or '').strip().rstrip(':').lower()
+>             if not rows:
+>                 continue
+>             if label_text.startswith('summary'):
+>                 data['summary'] = dict(zip(columns, rows[0]))
+>             elif label_text.startswith('detailed'):
+>                 data['detailed'] = [dict(zip(columns, row)) for row in rows]
+>         return json.dumps(data)
+> 
+502c529,534
+<     print(processor.report())  # this will only run when start in --no-follow mode
+---
+>     output_format = arguments.get('--output-format', 'table')
+>     if output_format == 'json':
+>         sys.stderr.write(processor.status_line() + '\n')
+>         print(processor.report_json())
+>     else:
+>         print(processor.report())  # this will only run when start in --no-follow mode
+599a632,635
+> 
+>     output_format = arguments.get('--output-format', 'table')
+>     if output_format not in ('table', 'json'):
+>         error_exit('invalid output format "%s" (expected: table, json)' % output_format, status=2)

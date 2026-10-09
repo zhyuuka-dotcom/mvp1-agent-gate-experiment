@@ -1,0 +1,6 @@
+$ .venv/bin/python - <<'PY'
+
+[stderr]
+bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `PY')
+
+[exit code: 0]

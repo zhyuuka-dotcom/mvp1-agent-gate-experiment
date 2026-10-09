@@ -1,0 +1,153 @@
+{
+ "arm": "T2-A",
+ "task": "T2",
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=4685ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=7025ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1899ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=6920ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=940ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1715ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=839ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=5ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3105ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1684ch"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=547ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=558ch"
+  },
+  {
+   "t": 16,
+   "exec_rc": 99,
+   "exec_summary": "DONE_DETECTED",
+   "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 28/28\n自报 0/0"
+  }
+ ],
+ "done_attempts": 1,
+ "done_receipts": [
+  {
+   "t": 16,
+   "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 28/28\n自报 0/0"
+  }
+ ],
+ "outcome": "DONE_END",
+ "fdv": {
+  "valid": true,
+  "turn": 16,
+  "receipt": "ACCEPTANCE PASS\nspec-direct 5/5\nedge 3/3\n存量 28/28\n自报 0/0",
+  "counts": {
+   "spec": [
+    5,
+    5
+   ],
+   "edge": [
+    3,
+    3
+   ],
+   "existing": [
+    28,
+    28
+   ],
+   "self_reported": [
+    0,
+    0
+   ]
+  }
+ },
+ "cap_hit": false,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [
+  {
+   "t": 16,
+   "declarations": [],
+   "counts": {
+    "spec": [
+     5,
+     5
+    ],
+    "edge": [
+     3,
+     3
+    ],
+    "existing": [
+     28,
+     28
+    ],
+    "self_reported": [
+     0,
+     0
+    ]
+   }
+  }
+ ],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 0
+}

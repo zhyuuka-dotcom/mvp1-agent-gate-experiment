@@ -1,0 +1,97 @@
+{
+ "arm": "T2-C",
+ "task": "T2",
+ "cap": 15,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=870ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1008ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=7025ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_NOARG"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=7024ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=2143ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3375ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1522ch"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1684ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=406ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=99ch"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 0
+}

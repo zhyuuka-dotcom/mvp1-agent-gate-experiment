@@ -1,0 +1,172 @@
+{
+ "arm": "T2-C",
+ "task": "T2",
+ "cap": 30,
+ "turns": [
+  {
+   "t": 1,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=3556ch"
+  },
+  {
+   "t": 2,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1203ch"
+  },
+  {
+   "t": 3,
+   "exec_rc": 0,
+   "exec_summary": "READ_OK ngxtop/ngxtop.py 23519ch"
+  },
+  {
+   "t": 4,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1820ch"
+  },
+  {
+   "t": 5,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1268ch"
+  },
+  {
+   "t": 6,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1277ch"
+  },
+  {
+   "t": 7,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=1630ch"
+  },
+  {
+   "t": 8,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=638ch"
+  },
+  {
+   "t": 9,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 10,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=34ch"
+  },
+  {
+   "t": 11,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 12,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 13,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=136ch"
+  },
+  {
+   "t": 14,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 15,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=492ch"
+  },
+  {
+   "t": 16,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 17,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 18,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=182ch"
+  },
+  {
+   "t": 19,
+   "exec_rc": 0,
+   "exec_summary": "RUN_OK rc=0 out=116ch"
+  },
+  {
+   "t": 20,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 21,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 22,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 23,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 24,
+   "exec_rc": 0,
+   "exec_summary": "READ_MISS"
+  },
+  {
+   "t": 25,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 26,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 27,
+   "exec_rc": 98,
+   "exec_summary": "NO_ACTION"
+  },
+  {
+   "t": 28,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 29,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  },
+  {
+   "t": 30,
+   "exec_rc": 0,
+   "exec_summary": "WRITE_DENIED_NOPLAN"
+  }
+ ],
+ "done_attempts": 0,
+ "done_receipts": [],
+ "outcome": "CAP",
+ "fdv": null,
+ "cap_hit": true,
+ "first_write": null,
+ "turns_spent_before_first_write": null,
+ "plan_attempts": 0,
+ "plan_rejections": 0,
+ "amendments": 0,
+ "dsml_events": [],
+ "self_report_parse": [],
+ "new_test_files": [],
+ "quote_clause": "gamma-D014",
+ "truncation_events": 0
+}
