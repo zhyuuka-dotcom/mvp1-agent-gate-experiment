@@ -1,0 +1,7 @@
+8d90e29486cd4cb28a96bb074f350cbf09ba2e0d00c3e7bb9ef84309b9081e42  ./COVERAGE.md
+05ff849732efa7120f85cd6f8f07dcd43d12abbb208c6b60acebc3185ae1e02b  ./FEEDBACK.md
+f9c21ae5ec64bb9c62939b4b73b2e85daf304adbc4763e7304cf09f58ecff78f  ./SPEC.md
+b79b16e5394daf6ae2deb192a7aee31e1bc2ef995f9e1c910fbc0e9d51f2d365  ./data/access.log
+3bcc3347228b51e4cba22e4ea4f9f6497dc8cc2514ede0def2ef24df8a909720  ./data/baseline-summary.txt
+9ac7f3f6230491d641da4f16bdfd525dd6462d3e78d5475ef405161c35e258aa  ./hiddencorpus.py
+687a74ca02cece59960e8f0f5c5be54a055722902c55d0e6063074c5303060a0  ./oracle.py
