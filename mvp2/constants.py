@@ -17,13 +17,20 @@ FIXED_RECEIPT_TEXT = (
 # 零动态信息：不含失败计数/类别/观测值/路径/堆栈；
 # 内容不随隐藏失败情况变化（入自测 b）。
 
-# ── D-020 §4.2 超时数值化（建议值，待 PI 核后冻结）─────────────
+# ── D-020 §4.2 超时数值化（D-022 §2.2 暂行冻结，PI 包末核）──
 # 运行中写入本实施包的预冻结毫秒值；"不得留'适当超时'类措辞"。
-ORACLE_TIMEOUT_MS = 120_000        # 验收器整体超时（建议值）
-ORACLE_PER_TEST_TIMEOUT_MS = 30_000  # 单验收测试超时（建议值）
-RUN_TOOL_TIMEOUT_MS = 60_000      # RUN 工具执行超时（建议值，沿用 MVP-1 实践 60s 量级）
-# 注：以上三值为执行者建议（MVP-1 遥测实际分布为依据），标 BLOCKED-adjacent：
-#   PI 核后冻结前，实现代码引用本常量但校准/正式运行前须 PI 签认（WP-2 前置）。
+# 冻结对照表（值→操作→依据）：
+#   ORACLE_TIMEOUT（验收器整体单次执行）=120,000ms
+#     依据：MVP-1 验收执行实测分布（秒级）×安全系数
+#   ORACLE_PER_TEST_TIMEOUT（单验收测试）=30,000ms
+#     依据：单测试含子进程启动（ngxtop CLI 冷启 ~1-2s）
+#   RUN_TOOL_TIMEOUT（RUN 工具执行）=60,000ms
+#     依据：MVP-1 run.log RUN 实测上限（长测试 ~30s）×2
+# 错配处置：实测超阈值而系统未判 ORACLETIMEOUT（或反之）→
+#   audit-error 三不计 + 入勘误（D-022 §2.2）。
+ORACLE_TIMEOUT_MS = 120_000        # 冻结（暂行，PI 包末核）
+ORACLE_PER_TEST_TIMEOUT_MS = 30_000  # 冻结（暂行，PI 包末核）
+RUN_TOOL_TIMEOUT_MS = 60_000      # 冻结（暂行，PI 包末核）
 
 # ── D-020 §4.3 audit-error 原因码（四类起步，实施包可增补）──────
 AUDIT_ERROR_CODES = [
